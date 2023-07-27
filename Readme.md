@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Mariya Isakova](https://up.htmlacademy.ru/adaptive/29/user/2362153).
-* Наставник: [Дмитрий Осадченко](https://htmlacademy.ru/profile/dimaos).
+* Наставник: [Дмитрий Осадченко](https://htmlacademy.ru/profile/dimaosgit).
 
 ---
 
