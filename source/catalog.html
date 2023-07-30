@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кэт энерджи</title>
+    <title>Каталог</title>
   </head>
   <body class="page-body">
     <header class="main-header">
-      <a class="main-header__logo logo" href="#" >
+      <a class="main-header__logo logo" href="index.html" >
         <img class="logo__image" src="img/logo_image.svg" width="33" height="38" alt="Логотип компании в виде картинки рыжиё пёс на жёлтом круге.">
         <img class="logo__text" src="img/logo_text.svg" width="101" height="18" alt="Логотип компании в виде текста Cat Energy.">
       </a>
@@ -22,10 +22,10 @@
         </button>
         <ul class="main-nav__list menu-list">
           <li class="menu-list__item">
-            <a href="#">главная</a>
+            <a href="index.html">главная</a>
           </li>
           <li class="menu-list__item ">
-            <a href="catalog.html">каталог продукции</a>
+            <a href="#">каталог продукции</a>
           </li>
           <li class="menu-list__item">
             <a href="form.html">подбор программы</a>
@@ -35,77 +35,167 @@
     </header>
 
     <main class="main-container">
-      <section class="hero-block">
-        <h1 class="hero-block__title">Функциональное
-          питание для котов</h1>
-        <p class="hero-block__description">
-          Занялся собой? Займись котом!
-        </p>
-        <img class="hero-block__image" src="img/hero/hero_pack.png" width="270" height="280" alt="Упаковка кэт энерджи с курицей.">
-        <a class="hero-block__button button" href="form.html">подобрать программу</a>
-      </section>
-
-      <section class="programs">
-        <div class="programs__wrapper">
-          <h2 class="visually-hidden">Программы питания</h2>
-          <ul class="programs__list program-list">
-            <li class="program-list__item card">
-              <h3 class="card__title card__title--slim">похудение</h3>
-              <p class="card__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-              <a class="card__link" href="#">каталог slim</a>
+      <section class="catalog">
+        <h1 class="catalog__title">Каталог продукции</h1>
+          <ul class="catalog__list cards">
+            <li class="cards__item">
+              <img class="cards__image" src="img/catalog/chicken500.jpg" width="140" height="112" alt="Корм Кэт Энерджи, курица 500 г.">
+              <h2 class="cards__title">cat energy <br>pro 500 г</h2>
+              <ul class="cards__characteristics characteristics">
+                <li class="characteristics__item property">
+                  <p class="property__name">масса <span class="property__value">500 г</span></p>
+                </li>
+                <li class="characteristics__item property">
+                  <p class="property__name">вкус <span class="property__value">курица</span></p></li>
+                <li class="characteristics__item property">
+                  <p class="property__name">цена <span class="property__value">700 ₽</span></p>
+                </li>
+              </ul>
+              <a class="cards__link button" href="#">заказать</a>
             </li>
-            <li class="program-list__item card">
-              <h3 class="card__title card__title--pro">набор массы</h3>
-              <p class="card__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a class="card__link" href="#">каталог PRO</a>
+            <li class="cards__item">
+              <img class="cards__image" src="img/catalog/chicken1000.jpg" width="140" height="112" alt="Корм Кэт Энерджи, курица 500 г.">
+              <h2 class="cards__title">cat energy <br>pro 1000 г</h2>
+              <ul class="cards__characteristics characteristics">
+                <li class="characteristics__item property">
+                  <p class="property__name">масса <span class="property__value">1000 г</span></p>
+                </li>
+                <li class="characteristics__item property">
+                  <p class="property__name">вкус <span class="property__value">курица</span></p></li>
+                <li class="characteristics__item property">
+                  <p class="property__name">цена <span class="property__value">1000 ₽</span></p>
+                </li>
+              </ul>
+              <a class="cards__link button" href="#">заказать</a>
+            </li>
+            <li class="cards__item">
+              <img class="cards__image" src="img/catalog/fish500.jpg" width="140" height="112" alt="Корм Кэт Энерджи, рыба 500 г.">
+              <h2 class="cards__title">cat energy <br>pro 500 г</h2>
+              <ul class="cards__characteristics characteristics">
+                <li class="characteristics__item property">
+                  <p class="property__name">масса <span class="property__value">500 г</span></p>
+                </li>
+                <li class="characteristics__item property">
+                  <p class="property__name">вкус <span class="property__value">рыба</span></p></li>
+                <li class="characteristics__item property">
+                  <p class="property__name">цена <span class="property__value">700 ₽</span></p>
+                </li>
+              </ul>
+              <a class="cards__link button" href="#">заказать</a>
+            </li>
+            <li class="cards__item">
+              <img class="cards__image" src="img/catalog/fish1000.jpg" width="140" height="112" alt="Корм Кэт Энерджи, рыба 500 г.">
+              <h2 class="cards__title">cat energy <br>pro 1000 г</h2>
+              <ul class="cards__characteristics characteristics">
+                <li class="characteristics__item property">
+                  <p class="property__name">масса <span class="property__value">1000 г</span></p>
+                </li>
+                <li class="characteristics__item property">
+                  <p class="property__name">вкус <span class="property__value">рыба</span></p></li>
+                <li class="characteristics__item property">
+                  <p class="property__name">цена <span class="property__value">1000 ₽</span></p>
+                </li>
+              </ul>
+              <a class="cards__link button" href="#">заказать</a>
+            </li>
+            <li class="cards__item">
+              <img class="cards__image" src="img/catalog/buckwheat500.jpg" width="140" height="112" alt="Корм Кэт Энерджи, гречка 500 г.">
+              <h2 class="cards__title">cat energy <br>slim 500 г</h2>
+              <ul class="cards__characteristics characteristics">
+                <li class="characteristics__item property">
+                  <p class="property__name">масса <span class="property__value">500 г</span></p>
+                </li>
+                <li class="characteristics__item property">
+                  <p class="property__name">вкус <span class="property__value">гречка</span></p></li>
+                <li class="characteristics__item property">
+                  <p class="property__name">цена <span class="property__value">400 ₽</span></p>
+                </li>
+              </ul>
+              <a class="cards__link button" href="#">заказать</a>
+            </li>
+            <li class="cards__item">
+              <img class="cards__image" src="img/catalog/buckwheat1000.jpg" width="140" height="112" alt="Корм Кэт Энерджи, гречка 500 г.">
+              <h2 class="cards__title">cat energy <br>slim 1000 г</h2>
+              <ul class="cards__characteristics characteristics">
+                <li class="characteristics__item property">
+                  <p class="property__name">масса <span class="property__value">1000 г</span></p>
+                </li>
+                <li class="characteristics__item property">
+                  <p class="property__name">вкус <span class="property__value">гречка</span></p></li>
+                <li class="characteristics__item property">
+                  <p class="property__name">цена <span class="property__value">700 ₽</span></p>
+                </li>
+              </ul>
+              <a class="cards__link button" href="#">заказать</a>
+            </li>
+            <li class="cards__item">
+              <img class="cards__image" src="img/catalog/rice500.jpg" width="140" height="112" alt="Корм Кэт Энерджи, рис 500 г.">
+              <h2 class="cards__title">cat energy <br>slim 500 г</h2>
+              <ul class="cards__characteristics characteristics">
+                <li class="characteristics__item property">
+                  <p class="property__name">масса <span class="property__value">500 г</span></p>
+                </li>
+                <li class="characteristics__item property">
+                  <p class="property__name">вкус <span class="property__value">рис</span></p></li>
+                <li class="characteristics__item property">
+                  <p class="property__name">цена <span class="property__value">500 ₽</span></p>
+                </li>
+              </ul>
+              <a class="cards__link button" href="#">заказать</a>
+            </li>
+            <li class="cards__item show-more">
+              <span class="show-more__plus"></span>
+              <h2 class="show-more__title">Показать еще 100500 товаров</h2>
+              <p class="show-more__decription">На самом деле вкусов гораздо больше!</p>
+              <a class="show-more__link button" href="#">показать все</a>
             </li>
           </ul>
-        </div>
       </section>
 
-      <section class="technology">
-        <div class="technology__wrapper">
-          <h2 class="technology__title">Как это работает</h2>
-          <ol class="technology__list">
-            <li class="technology__item technology__item--leaf technology-card">
-              <p class="card__description">Функциональное питание
-                содержит только полезные
-                питательные вещества.</p>
-            </li>
-            <li class="technology__item technology__item--powder technology-card">
-              <p class="card__description">Выпускается в виде порошка,
-                который нужно лишь залить
-                кипятком и готово.</p>
-            </li>
-            <li class="technology__item technology__item--fork technology-card">
-              <p class="card__description">Замените один-два приема
-                обычной еды на наше
-                функциональное питание.</p>
-            </li>
-            <li class="technology__item technology__item--time technology-card">
-              <p class="card__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-            </li>
-          </ol>
-        </div>
+      <section class="optional">
+        <h2 class="optional__title">Дополнительные товары</h2>
+        <ul class="optional__list additives-list">
+          <li class="additives-list__item">
+            <h3 class="additives-list__title">Сахарозаменитель</h3>
+            <div class="additives-list__wrapper-value">
+              <p class="additives-list__value">1 упаковка (100 г)</p>
+              <span class="additives-list__price">200 ₽</span>
+            </div>
+            <a class="additivies-list__link button" href="#">заказать</a>
+          </li>
+          <li class="additives-list__item">
+            <h3 class="additives-list__title">питьевая вода</h3>
+            <div class="additives-list__wrapper-value">
+              <p class="additives-list__value">5 литров</p>
+              <span class="additives-list__price">50 ₽</span>
+            </div>
+            <a class="additivies-list__link button" href="#">заказать</a>
+          </li>
+          <li class="additives-list__item">
+            <h3 class="additives-list__title">молоко</h3>
+            <div class="additives-list__wrapper-value">
+              <p class="additives-list__value">1 литр</p>
+              <span class="additives-list__price">100 ₽</span>
+            </div>
+            <a class="additivies-list__link button" href="#">заказать</a>
+          </li>
+          <li class="additives-list__item">
+            <h3 class="additives-list__title">витамины</h3>
+            <div class="additives-list__wrapper-value">
+              <p class="additives-list__value">1 упаковка (30 г)</p>
+              <span class="additives-list__price">300 ₽</span>
+            </div>
+            <a class="additivies-list__link button" href="#">заказать</a>
+          </li>
+
+        </ul>
       </section>
 
-      <section class="review">
-        <div class="review__wrapper">
-          <h2 class="review__title">Живой пример</h2>
-          <p class="review__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-          <div class="review__result result">
-            <div class="result__wrapper">
-              <p class="result__index-number">5 кг </p>
-              <p class="result__index-description">снижение веса</p>
-            </div>
-            <div class="result__wrapper">
-              <p class="result__index-number">60 дней</p>
-              <p class="result__index-description">затрачено времени</p>
-            </div>
-          </div>
-          <p class="review__results">Затраты на питание: 15 000 РУБ. </p>
-          <img class="review__image review__image--thin" src="img/result_cat.png" width="280" height="256" alt="Слайдер для наглядного результата похудения кота Бориса.">
-        </div>
+      <section class="promotion">
+        <h2 class="visually-hidden">Акционное предложение</h2>
+        <p class="promotion__description promotion__description--gift">Закажите все
+          и получите чехол для
+          кота в подарок!</p>
       </section>
 
       <section class="map">
@@ -121,7 +211,7 @@
 
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <a class="main-footer__catenergy" href="#">
+        <a class="main-footer__catenergy" href="index.html">
           <img class="logo__text" src="img/logo_text.svg" width="101" height="18" alt="Логотип компании в виде текста Cat Energy.">
         </a>
         <div class="main-footer__social">
