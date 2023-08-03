@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Oswald";
   font-style: normal;
@@ -5,7 +6,6 @@
   src: url("../fonts/oswald/oswaldmedium.woff2") format("woff2");
   font-display: swap;
 }
-
 @font-face {
   font-family: "Lato";
   font-style: normal;
@@ -13,7 +13,6 @@
   src: url("../fonts/lato/Lato-Regular.woff2") format("woff2");
   font-display: swap;
 }
-
 :root {
   --color-white: #ffffff;
   --color-black: #000000;
@@ -66,7 +65,7 @@
   margin: 0;
   width: 100%;
   min-height: 362px;
-  background-image: url("../../img/map.png");
+  background-image: url("../img/map.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -165,8 +164,8 @@
 .hero-block {
   color: var(--color-white);
   font-weight: 400;
-  text-align: center;
-  background-image: url("../../img/hero/hero_background.jpg");
+  text-align: cenтter;
+  background-image: url("../img/hero/hero_background.jpg");
   background-position: top;
   background-size: contain;
   background-repeat: no-repeat;
@@ -526,10 +525,10 @@
 }
 
 .show-more__plus {
-  display: block;
   margin: 0 auto;
   margin-bottom: 23px;
-  background-image: url("../../img/catalog/plus.svg");
+  display: block;
+  background-image: url("../img/catalog/plus.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -567,7 +566,7 @@
 
 .promotion {
   background-color: var(--color-accent);
-  background-image: url("../../img/promotion/bg-promotion.jpg");
+  background-image: url("../img/promotion/bg-promotion.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin: 35px 20px;
