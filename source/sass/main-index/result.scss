@@ -1,0 +1,30 @@
+
+.result {
+  display: flex;
+  gap: 32px;
+}
+
+.result__wrapper {
+  display: block;
+  margin: auto;
+  padding-top: 15px;
+  border: 1px solid #000000;//временно для наглядности
+}
+
+.result__index-number {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.result__index-description {
+  text-align: center;
+  margin: 0;
+  font-weight: 400;
+  color: var(--color-grey500);
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 100%;
+}
