@@ -38,7 +38,7 @@
   justify-content: space-between;
   align-items: center;
   max-width: 280px;
-  margin: 0 20px;
+  margin: 0 auto;
   padding: 26px 0;
 }
 
@@ -69,6 +69,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border: none;
 }
 
 .map--basic {
@@ -78,6 +79,7 @@
 .button {
   padding: 8px 44px;
   text-decoration: none;
+  text-align: center;
   color: var(--color-white);
   background-color: var(--color-accent);
   font-family: "Oswald", sans-serif;
@@ -100,10 +102,9 @@
 }
 
 .main-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  width: 320px;
+  margin: 0 auto;
+  position: relative;
   color: var(--color-black);
   font-size: 20px;
   line-height: 20px;
@@ -112,9 +113,16 @@
   margin-top: 13px;
 }
 
+.main-header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
 .main-header__toggle {
   margin-bottom: 15px;
-  margin-right: 20px;
 }
 
 .main-nav {
@@ -148,7 +156,6 @@
 }
 
 .logo {
-  margin-left: 20px;
   text-decoration: none;
   margin-bottom: 15px;
 }
@@ -158,6 +165,7 @@
 }
 
 .logo__text {
+  position: absolute;
   padding: 10px 0;
 }
 
@@ -174,7 +182,7 @@
 
 .hero-block__wrapper {
   max-width: 280px;
-  margin: 0 20px;
+  margin: 0 auto;
 }
 
 .hero-block__title {
@@ -208,7 +216,7 @@
 
 .programs {
   max-width: 280px;
-  margin: 0 20px;
+  margin: 0 auto;
   background-color: var(--color-white);
   color: var(--color-black);
   margin-bottom: 20px;
@@ -263,7 +271,7 @@
   background-color: var(--color-white);
   color: var(--color-black);
   max-width: 280px;
-  margin: 0 20px;
+  margin: 0 auto;
   padding-bottom: 50px;
 }
 
@@ -305,7 +313,7 @@
 
 .review__wrapper {
   max-width: 280px;
-  margin: 0 20px;
+  margin: 0 auto;
 }
 
 .review__title {
@@ -380,6 +388,7 @@
   background-color: var(--color-white);
   color: var(--color-black);
   max-width: 320px;
+  margin: 0 auto;
 }
 
 .catalog__title {
@@ -507,7 +516,7 @@
 
 .optional__wrapper {
   max-width: 280px;
-  margin: 0 20px;
+  margin: 0 auto;
 }
 
 .optional__title {
@@ -674,7 +683,7 @@
 
 .form-cat__wrapper {
   max-width: 280px;
-  margin: 0 20px;
+  margin: 0 auto;
   color: var(--color-grey500);
   font-size: 16px;
   font-weight: 400;
