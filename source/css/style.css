@@ -340,7 +340,7 @@
   font-weight: 400;
   text-align: center;
   background-image: url("../img/hero/hero_background.jpg"), linear-gradient(var(--color-bg-hero) 100%, var(--color-white) 60%);
-  background-size: auto 302px;
+  background-size: auto 63%;
   background-position: center 0;
   background-repeat: no-repeat;
   padding-bottom: 20px;

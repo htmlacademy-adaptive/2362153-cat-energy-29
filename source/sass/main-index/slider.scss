@@ -1,0 +1,34 @@
+.slider {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-image: url("../img/slider/m-cat-fat.png");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: 100vw;
+  position: relative;
+}
+
+.slider input {
+  -webkit-appearance: none;
+  width: 100%;
+  background: none;
+  z-index: 10;
+}
+
+.slider input::-weblit-slider-thumb {
+  -webkit-appearance: none;
+  width: 2px;
+  height: 100vw;
+  background-color: #666666;
+  cursor: pointer;
+}
+
+.slider__cat-slim {
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+  background: url("../img/slider/m-cat-slim.png") no-repeat;
+  background-position: 0 center;
+  background-size: 100vw;
+}
