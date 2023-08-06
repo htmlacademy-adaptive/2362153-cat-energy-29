@@ -1,19 +1,56 @@
 .review {
   background-color: var(--color-grey300);
   color: var(--color-black);
+
+  @media (min-width: $tablet-width) {
+    border-top: 1px solid var(--color-grey350);
+    background: linear-gradient(to top, var(--color-grey300) 46%, var(--color-white) 46%);
+  }
+
+  @media (min-width: $desktop-width) {
+    border: none;
+    background: linear-gradient(to top, var(--color-grey300) 80%, var(--color-white) 80%);
+  }
 }
 
 .review__wrapper {
-  max-width: 280px;
+  max-width: $phone-width;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
+    padding: 0 110px;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+  }
 }
 
 .review__title {
+  margin: 0;
   padding-top: 25px;
   margin-bottom: 40px;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    margin-bottom: 146px;
+  }
 }
 
 .review__description {
@@ -24,24 +61,59 @@
   font-family: "Lato", sans-serif;
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    margin-bottom: 69px;
+  }
+}
+
+.review__container {
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 366px 1fr;
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    grid-template-columns: 1fr;
+    margin-bottom: 75px;
+  }
 }
 
 .review__result {
   margin-bottom: 20px;
-}
 
-.review__results {
-  margin: 0;
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  text-transform: uppercase;
-  text-align: center;
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .review__image {
   display: block;
-  margin: 0;
+  margin: 0 auto;
   padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    // временно до темы оптимизации картинок
+    width: 560px;
+    height: 512px;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2/3;
+    grid-row: 1 / 4;
+    padding-bottom: 85px;
+  }
 }

@@ -2,13 +2,32 @@
   border: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 67px;
+  }
 }
 
 .owner__item {
   display: flex;
   align-items: baseline;
   width: 100%;
-  padding-bottom: 24px;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .owner__title {
@@ -20,6 +39,13 @@
   font-weight: 400;
   line-height: 26px;
   text-transform: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 76px;
+    padding: 0;
+  }
 }
 
 .owner__control {

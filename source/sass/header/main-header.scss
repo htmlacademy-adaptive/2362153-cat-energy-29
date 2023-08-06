@@ -1,5 +1,5 @@
 .main-header {
-  width: 320px;
+  max-width: $phone-width;
   margin: 0 auto;
   position: relative;
   color: var(--color-black);
@@ -8,6 +8,23 @@
   font-weight: 400;
   text-transform: uppercase;
   margin-top: 13px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+    margin-top: 25px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
+    margin-top: 54px;
+    padding: 0 110px;
+  }
 }
 
 .main-header__wrapper {
@@ -16,8 +33,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .main-header__toggle {
   margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

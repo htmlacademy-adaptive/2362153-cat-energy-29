@@ -1,17 +1,36 @@
 .catalog {
   background-color: var(--color-white);
   color: var(--color-black);
-  max-width: 320px;
+  max-width: $phone-width;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+    padding: 0 30px;
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
+    padding: 0 110px;
+  }
 }
 
 .catalog__title {
   margin: 0;
   display: block;
-  padding: 27px 20px 41px;
-  border-top: 1px solid #ebebeb;
-  border-bottom: 1px solid #ebebeb;
+  padding: 27px 0 41px;
+  border-top: 1px solid --color-grey450;
+  border-bottom: 1px solid --color-grey370;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    padding: 66px 0 90px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

@@ -3,14 +3,22 @@
   --color-black: #000000;
 
   --color-grey200: #f2f2f2;
+  --color-grey250: #e7e7e7;
   --color-grey300: #eaeaea;
+  --color-grey350: #e6e6e6;
+  --color-grey370: #ebebeb;
+  --color-grey400: #cdcdcd;
+  --color-grey450: #d9d9d9;
   --color-grey500: #444444;
   --color-grey600: #222222;
   --color-grey700: #111111;
 
-  --bg-color-basic: var(--color-grey200);
   --color-accent: #68b738;
+  --color-bg-hero: #60a538;
+
+  --bg-color-basic: var(--color-grey200);
 }
 
+$phone-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1440px;

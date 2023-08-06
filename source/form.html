@@ -22,13 +22,13 @@
     <nav class="main-header__nav main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a href="index.html">главная</a>
+          <a class="main-nav__link" href="index.html">главная</a>
         </li>
-        <li class="main-nav__item ">
-          <a href="catalog.html">каталог продукции</a>
+        <li class="main-nav__item" class="main-nav__item ">
+          <a class="main-nav__link" href="catalog.html">каталог продукции</a>
         </li>
-        <li class="main-nav__item">
-          <a href="#">подбор программы</a>
+        <li class="main-nav__item" class="main-nav__item">
+          <a class="main-nav__link main-nav__link--active" href="#">подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -41,47 +41,49 @@
         <p class="form-cat__description">Заполните анкету, и мы подберем
           программу питания для вашего кота</p>
         <form class="form-cat__data form" action="https://echo.htmlacademy.ru" method="get">
-          <div class="form__info info-cat">
-            <div class="info-cat__item">
-              <label class="info-cat__control" for="cat-name"> имя* </label>
-              <input class="info-cat__field" type="text" name="cat-name" id="cat-name" placeholder="барсик" required>
+          <div class="form-cat__wrapper-desktop">
+            <div class="form__info info-cat">
+              <div class="info-cat__item">
+                <label class="info-cat__control" for="cat-name"> имя* </label>
+                <input class="info-cat__field" type="text" name="cat-name" id="cat-name" placeholder="барсик" required>
+              </div>
+              <div class="info-cat__item">
+                <label class="info-cat__control" for="cat-weight"> вес(кг)*</label>
+                <input class="info-cat__field" type="number" name="cat-weight" id="cat-weight" placeholder="7" min="0" max="100" required>
+              </div>
+              <div class="info-cat__item">
+                <label class="info-cat__control" for="cat-age"> возраст(лет)*</label>
+                <input class="info-cat__field" type="number" name="cat-age" id="cat-age" placeholder="7" min="0" max="30" required>
+              </div>
             </div>
-            <div class="info-cat__item">
-              <label class="info-cat__control" for="cat-weight"> вес(кг)*</label>
-              <input class="info-cat__field" type="number" name="cat-weight" id="cat-weight" placeholder="7" min="0" max="100" required>
-            </div>
-            <div class="info-cat__item">
-              <label class="info-cat__control" for="cat-age"> возраст(лет)*</label>
-              <input class="info-cat__field" type="number" name="cat-age" id="cat-age" placeholder="7" min="0" max="30" required>
-            </div>
-          </div>
 
-          <fieldset class="form__info target">
-            <legend class="visually-hidden">Цель питания:</legend>
-            <ul class="target__list">
-              <li class="target__item">
-                <label class="target__control">
-                  <input class="target__input" type="radio" name="target__control" value="slim" checked>
-                  <!-- <span class="target__control-mark"></span> -->
-                  <span class="target__control-label">Похудение</span>
-                </label>
-              </li>
-              <li class="target__item">
-                <label class="target__control">
-                  <input class="target__input" type="radio" name="target__control" value="fat">
-                  <!-- <span class="target__control-mark"></span> -->
-                  <span class="target__control-label">Набор массы</span>
-                </label>
-              </li>
-              <li class="target__item">
-                <label class="target__control">
-                  <input class="target__input" type="radio" name="target__control" value="advice">
-                  <!-- <span class="target__control-mark"></span> -->
-                  <span class="target__control-label">Не знаю (Нужен ваш совет)</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+            <fieldset class="form__info target">
+              <legend class="visually-hidden">Цель питания:</legend>
+              <ul class="target__list">
+                <li class="target__item">
+                  <label class="target__control">
+                    <input class="visually-hidden target__input" type="radio" name="target__control" value="slim" checked>
+                    <span class="target__control-mark"></span>
+                    <span class="target__control-label">Похудение</span>
+                  </label>
+                </li>
+                <li class="target__item">
+                  <label class="target__control">
+                    <input class="visually-hidden target__input" type="radio" name="target__control" value="fat">
+                    <span class="target__control-mark"></span>
+                    <span class="target__control-label">Набор массы</span>
+                  </label>
+                </li>
+                <li class="target__item">
+                  <label class="target__control">
+                    <input class="visually-hidden target__input" type="radio" name="target__control" value="advice">
+                    <span class="target__control-mark"></span>
+                    <span class="target__control-label">Не знаю (Нужен ваш совет)</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
 
           <fieldset class="form__info owner">
             <legend class="owner__title">Контактные данные (владельца кота)</legend>
@@ -106,37 +108,39 @@
             <ul class="additionally__list">
               <li class="additionally__item">
                 <label class="additionally__control">
-                  <input class="additionally__input" type="checkbox" name="sweetener" checked>
-                  <!-- <span class="additionally__control-mark"></span> -->
+                  <input class="visually-hidden additionally__input" type="checkbox" name="sweetener" checked>
+                  <span class="additionally__control-mark"></span>
                   <span class="additionally__control-label">сахарозаменитель</span>
                 </label>
               </li>
               <li class="additionally__item">
                 <label class="additionally__control">
-                  <input class="additionally__input" type="checkbox" name="water">
-                  <!-- <span class="additionally__control-mark"></span> -->
+                  <input class="visually-hidden additionally__input" type="checkbox" name="water">
+                  <span class="additionally__control-mark"></span>
                   <span class="additionally__control-label">питьевая вода</span>
                 </label>
               </li>
               <li class="additionally__item">
                 <label class="additionally__control">
-                  <input class="additionally__input" type="checkbox" name="milk">
-                  <!-- <span class="additionally__control-mark"></span> -->
+                  <input class="visually-hidden additionally__input" type="checkbox" name="milk">
+                  <span class="additionally__control-mark"></span>
                   <span class="additionally__control-label">молоко</span>
                 </label>
               </li>
               <li class="additionally__item">
                 <label class="additionally__control">
-                  <input class="additionally__input" type="checkbox" name="vitamins">
-                  <!-- <span class="additionally__control-mark"></span> -->
+                  <input class="visually-hidden additionally__input" type="checkbox" name="vitamins">
+                  <span class="additionally__control-mark"></span>
                   <span class="additionally__control-label">витамины</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <button class="form-cat__button button" type="submit">отправить заявку</button>
-          <p class="form-cat__mark">* — Обязательные поля</p>
-        </form>
+          <div class="form-cat__wrapper-button">
+            <button class="form-cat__button button" type="submit">отправить заявку</button>
+            <p class="form-cat__mark">* — Обязательные поля</p>
+          </div>
+          </form>
       </div>
     </section>
 
@@ -145,7 +149,7 @@
         <h2 class="map__title">приглашаем к сотрудничеству дилеров!</h2>
         <address class="map__description">ул. Большая
           Конюшенная, д. 19/8
-          Санкт-Петербург</address>
+          <span class="map__city">Санкт-Петербург</span></address>
       </div>
       <iframe class="map__frame map__frame--image"></iframe>
     </section>
