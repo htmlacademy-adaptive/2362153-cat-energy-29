@@ -3,25 +3,65 @@
   margin: 0;
   padding: 22px 0 19px;
   border: none;
-  border-bottom: 1px solid #d9d9d9;//временно для наглядности
+  border-bottom: 1px solid var(--color-grey450);//временно для наглядности
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid var(--color-grey250);
+    padding: 0;
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .target__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: grid;
+  gap: 13px;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 27px;
+  }
 }
 
 .target__control {
   position: relative;
-  display: block;
   margin-bottom: 13px;
+  cursor: pointer;
+  min-height: 15px;
+  display: grid;
+  align-items: center;
 }
 
-// .target__control-mark {
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   border: 2px solid var(--color-grey600);
-//   border-radius: 50%;
-// }
+.target__control-mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  top: 0;
+  border: 1px solid var(--color-grey400);
+  border-radius: 50%;
+  background-color: var(--color-white);
+}
+
+.target__control-label {
+  position: absolute;
+  top: 50%;
+  padding-left: 45px;
+}
+
+.target__input[type="radio"]:checked + .target__control-mark::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 13px;
+  height: 13px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  content: "";
+  transform: translateX(-50%) translateY(-50%);
+}

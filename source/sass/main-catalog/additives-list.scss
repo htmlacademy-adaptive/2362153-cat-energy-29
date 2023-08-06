@@ -1,5 +1,17 @@
 .additives-list {
+  position: relative;
   padding: 0;
   margin: 0;
   list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid var(--color-grey400);
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 895px;
+    border: none;
+    border-top: 1px solid var(--color-grey400);
+    border-bottom: 1px solid var(--color-grey400);
+  }
 }

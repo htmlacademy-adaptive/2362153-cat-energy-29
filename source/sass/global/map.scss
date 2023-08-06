@@ -2,9 +2,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 280px;
+  max-width: $phone-width;
   margin: 0 auto;
-  padding: 26px 0;
+  padding: 26px 20px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+    padding: 61px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    z-index: 10;
+    background-color: var(--color-white);
+    padding: 60px 80px;
+    margin-top: 95px;
+    margin-left: 110px;
+    gap: 80px;
+  }
 }
 
 .map__title {
@@ -14,6 +30,12 @@
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 170px;
+  }
 }
 
 .map__description {
@@ -24,6 +46,16 @@
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    max-width: 160px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 }
 
 .map__frame--image {
@@ -35,8 +67,23 @@
   background-repeat: no-repeat;
   background-size: cover;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    min-height: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
 }
 
 .map--basic {
   background-color: var(--color-grey200);
+}
+
+.map__city {
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-top: 19px;
+  }
 }

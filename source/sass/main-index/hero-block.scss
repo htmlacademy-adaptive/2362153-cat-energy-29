@@ -1,19 +1,60 @@
 .hero-block {
+  position: relative;
   color: var(--color-white);
   font-weight: 400;
-  //как сделать цвет фона, если не прогрузиться картинка?
-  // background-color: var(--bg-color-accent);
-  text-align: cenтter;
-  background-image: url("../img/hero/hero_background.jpg");
-  background-position: top;
-  background-size: contain;
+  text-align: center;
+  background-image: url("../img/hero/hero_background.jpg"),
+    linear-gradient(var(--color-bg-hero) 100%, var(--color-white) 60%);
+  background-size: auto 302px;
+  background-position: center 0;
   background-repeat: no-repeat;
   padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    color: var(--color-black);
+    background: var(--color-white);
+    text-align: left;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    background: none;
+    margin-bottom: 82px;
+
+    &::before {
+      content: "";
+      min-width: 720px;
+      min-height: 694px;
+      position: absolute;
+      top: -110px;
+      right: 0;
+      background-color: var(--color-accent);
+      background-image: url("../img/hero/hero_background.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;//временно до темы картинок, надо подвинуть кота
+      z-index: -1;
+    }
+  }
 }
 
 .hero-block__wrapper {
-  max-width: 280px;
+  max-width: $phone-width;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
+    padding: 0 110px;
+  }
 }
 
 .hero-block__title {
@@ -23,6 +64,20 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 500px;
+    font-size: 60px;
+    line-height: 60px;
+    padding-top: 65px;
+    padding-left: 90px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 110px;
+    padding-left: 80px;
+  }
 }
 
 .hero-block__description {
@@ -32,15 +87,52 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 50px;
+    padding-left: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 80px;
+  }
 }
 
 .hero-block__image {
   display: block;
+  position: relative;
   margin: 0 auto;
   margin-bottom: 3px;
+
+  @media (min-width: $tablet-width) {
+    order: 2;
+    z-index: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 143px;
+    left: 657px;
+    scale: 1.3;//временно до темы картинок
+  }
 }
 
 .hero-block__button {
   display: block;
   margin: 0;
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 90px;
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 80px;
+    margin-bottom: 183px;
+  }
 }

@@ -1,13 +1,29 @@
 .logo {
+  display: block;
   text-decoration: none;
   margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0;
+  }
 }
 
 .logo__image {
   margin-right: 56px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 13px;
+  }
 }
 
 .logo__text {
   position: absolute;
   padding: 10px 0;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+  }
 }
