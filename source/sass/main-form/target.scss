@@ -1,0 +1,27 @@
+.target {
+  color: var(--color-grey600);
+  margin: 0;
+  padding: 22px 0 19px;
+  border: none;
+  border-bottom: 1px solid #d9d9d9;//временно для наглядности
+}
+
+.target__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.target__control {
+  position: relative;
+  display: block;
+  margin-bottom: 13px;
+}
+
+// .target__control-mark {
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   border: 2px solid var(--color-grey600);
+//   border-radius: 50%;
+// }

@@ -1,0 +1,17 @@
+.catalog {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.catalog__title {
+  margin: 0;
+  display: block;
+  padding: 27px 20px 41px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}

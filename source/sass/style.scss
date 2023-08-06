@@ -1,1 +1,45 @@
-// Начните писать стили здесь
+@import "./global/fonts.scss";
+@import "./global/variables.scss";
+@import "./global/page-body.scss";
+@import "./global/map.scss";
+@import "./global/button.scss";
+@import "./global/visually-hidden.scss";
+
+//HEADER
+@import "./header/main-header.scss";
+@import "./header/main-nav.scss";
+@import "./header/logo.scss";
+
+//MAIN-INDEX
+@import "./main-index/hero-block.scss";
+@import "./main-index/programs.scss";
+@import "./main-index/program-list.scss";
+@import "./main-index/program-card.scss";
+@import "./main-index/advantages.scss";
+@import "./main-index/advantages-card.scss";
+@import "./main-index/review.scss";
+@import "./main-index/result.scss";
+
+//CATALOG
+@import "./main-catalog/catalog.scss";
+@import "./main-catalog/cards.scss";
+@import "./main-catalog/product-card.scss";
+@import "./main-catalog/additives-list.scss";
+@import "./main-catalog/additivie-item.scss";
+@import "./main-catalog/optional.scss";
+@import "./main-catalog/show-more.scss";
+@import "./main-catalog/promotion.scss";
+
+//FORM
+@import "./main-form/additionally.scss";
+@import "./main-form/comment.scss";
+@import "./main-form/form-cat.scss";
+@import "./main-form/info-cat.scss";
+@import "./main-form/owner.scss";
+@import "./main-form/target.scss";
+
+
+//FOOTER
+@import "./footer/main-footer.scss";
+@import "./footer/htmlacademy.scss";
+@import "./footer/social-list.scss";
