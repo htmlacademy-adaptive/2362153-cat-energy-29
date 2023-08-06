@@ -875,6 +875,8 @@
 .review {
   background-color: var(--color-grey300);
   color: var(--color-black);
+  padding-bottom: 40px;
+  box-sizing: border-box;
 }
 @media (min-width: 768px) {
   .review {
@@ -1075,6 +1077,45 @@
 
 .result__total-price {
   margin-left: 63px;
+}
+
+.slider {
+  width: 100%;
+  height: 256px;
+  display: flex;
+  background-color: var(--color-grey300);
+  background-image: url("../img/slider/m-cat-slim.png");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: 0 cover;
+  position: relative;
+}
+
+.slider__input {
+  -webkit-appearance: none;
+  width: 100%;
+  background: none;
+  z-index: 10;
+}
+
+.slider__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 2px;
+  height: 256px;
+  background-color: #666666;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider__cat-slim {
+  position: absolute;
+  width: 50%;
+  height: 256px;
+  background-color: var(--color-grey300);
+  background-image: url("../img/slider/m-cat-fat.png");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: 0 cover;
 }
 
 .catalog {
