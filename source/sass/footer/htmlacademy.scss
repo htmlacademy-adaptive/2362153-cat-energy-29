@@ -1,6 +1,7 @@
 .htmlacademy {
   width: 100%;
-  padding-top: 20px;
+  padding: 20px 20px 0;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     width: 168px;

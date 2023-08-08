@@ -1,3 +1,5 @@
+//заготовка под слайдер
+
 .slider {
   width: 100%;
   height: 256px;
@@ -8,6 +10,12 @@
   background-position: 0 center;
   background-size: 0 cover;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+    padding-bottom: 100px;
+  }
 }
 
 .slider__input {
@@ -24,9 +32,14 @@
   background-color: #666666;
   cursor: pointer;
   z-index: 10;
+
+  @media (min-width: $tablet-width) {
+    height: 512px;
+    background-color: transparent;
+  }
 }
 
-//Пока не знаю,как добавить кнопку вместе с линией
+//Думаю,как добавить кнопку вместе с линией
 // .slider__button {
 //   position: absolute;
 //   width: 40px;
@@ -49,4 +62,9 @@
   background-repeat: no-repeat;
   background-position: 0 center;
   background-size: 0 cover;
+
+  @media (min-width: $tablet-width) {
+    height: 512px;
+    background-color: transparent;
+  }
 }

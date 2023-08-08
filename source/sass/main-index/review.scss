@@ -44,6 +44,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    padding-top: 45px;
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 60px;
@@ -80,6 +81,7 @@
   display: grid;
   align-items: center;
   justify-content: space-between;
+  grid-template-columns: 1fr;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 366px 1fr;
@@ -94,10 +96,14 @@
 }
 
 .review__result {
-  margin-bottom: 20px;
+  margin-bottom: 34px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
   }
 }
 
