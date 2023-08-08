@@ -1,6 +1,9 @@
 .catalog {
   background-color: var(--color-white);
   color: var(--color-black);
+}
+
+.catalog__wrapper {
   max-width: $phone-width;
   margin: 0 auto;
   padding: 0 20px;

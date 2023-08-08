@@ -15,6 +15,7 @@
 
 .main-nav--active {
   display: flex;
+  position: relative;
 }
 
 .main-nav__list {
@@ -22,6 +23,12 @@
   padding: 0;
   list-style-type: none;
   text-align: center;
+
+  @media (max-width: calc($tablet-width - 1px)) {
+    top: 0;
+    position: absolute;
+    z-index: 10;
+  }
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -33,14 +40,40 @@
 }
 
 .main-nav__item {
-  border-top: 1px solid var(--color-grey350);
+  position: relative;
 
-  @media (max-width: $tablet-width) {
-    // width: 100vw;//играюсь с вариантом
-  }
+  @media (max-width: calc($tablet-width - 1px)) {
+    width: 100vw;
+    padding-top: 22px;
+    padding-bottom: 24px;
+    background-color: var(--color-white);
 
-  @media (min-width: $tablet-width) {
-    border: none;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      height: 1px;
+      width: 100vw;
+      background-color: var(--color-grey350);
+      margin: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 24px;
+    }
+
+    &:last-child::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 100vw;
+      background-color: var(--color-grey350);
+      margin: 0;
+    }
   }
 }
 
@@ -54,8 +87,6 @@
   text-align: center;
   border: none;
   cursor: pointer;
-  margin-top: 22px;
-  margin-bottom: 24px;
 
   @media (min-width: $tablet-width) {
     padding: 0;

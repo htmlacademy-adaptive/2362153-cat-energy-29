@@ -67,11 +67,12 @@
   box-shadow: 0 8px 0 0 var(--color-black), 0 16px 0 0 var(--color-black);
 }
 
+.main-header__toggle:hover::before {
+  opacity: 0.6;
+}
+
 .main-header__toggle:active::before {
-  background-color: fade(var(--color-black), 30%);
-  box-shadow:
-    0 8px 0 0 fade(var(--color-black), 30%),
-    0 16px 0 0 fade(var(--color-black), 30%);
+  opacity: 0.3;
 }
 
 .main-header__toggle--opened {
@@ -95,8 +96,13 @@
     transform: rotate(-45deg);
   }
 
+  &:hover::before,
+  &:hover::after {
+    opacity: 0.6;
+  }
+
   &:active::before,
   &:active::after {
-    background-color: fade(var(--color-black), 30%);
+    opacity: 0.3;
   }
 }
