@@ -79,6 +79,16 @@
   }
 }
 
+.product-card__image-wrapper {
+  height: 81px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    height: 139px;
+    margin-bottom: -59px;
+  }
+}
+
 .product-card__link {
   text-decoration: none;
 }
@@ -87,11 +97,6 @@
   display: flex;
   align-self: center;
   justify-content: center;
-
-  @media (min-width: $tablet-width) {
-    height: 139px;
-    position: relative;
-  }
 }
 
 .product-card__image {
@@ -100,7 +105,7 @@
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    bottom: 0;
+    top: -81px;
     left: 50%;
     transform: translateX(-50%);
     height: 139px;

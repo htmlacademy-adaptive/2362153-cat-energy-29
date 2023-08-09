@@ -58,13 +58,22 @@
   }
 }
 
-.map__frame--image {
-  margin: 0;
-  width: 100%;
-  min-height: 362px;
-  background-image: url("../img/map.png");
-  background-position: center;
-  background-repeat: no-repeat;
+.map__frame {
+  margin: 0 auto;
+  width: 100vw;
+  height: 362px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+}
+
+.map__frame-image {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100vw;
+  min-height: 352px;
   background-size: cover;
   border: none;
 
@@ -86,4 +95,9 @@
     display: block;
     margin-top: 19px;
   }
+}
+
+//Настройки карты яндекс
+.map__frame .popup {
+  visibility: hidden;
 }

@@ -2,16 +2,28 @@
   padding: 13px 0 19px;
   border-bottom: 1px solid var(--color-grey400);
 
+  &:first-child {
+    border-top: 1px solid var(--color-grey400);
+  }
+
   @media (min-width: $tablet-width) {
     padding: 26px 38px 28px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    &:first-child {
+      border-top: none;
+    }
 
     &:last-child {
       border-bottom: none;
     }
 
     @media (min-width: $desktop-width) {
+      &:first-child {
+        border-top: 1px solid var(--color-grey400);
+      }
+
       &:not(:last-child) {
         border-bottom: 1px solid var(--color-grey400);
       }
@@ -89,6 +101,7 @@
 .additivie-item__button {
   font-size: 16px;
   line-height: 20px;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
     grid-column: 1/3;
