@@ -86,6 +86,7 @@
     width: 24px;
     height: 2px;
     background-color: var(--color-black);
+    transition: all 0.1s ease;
   }
 
   &::before {

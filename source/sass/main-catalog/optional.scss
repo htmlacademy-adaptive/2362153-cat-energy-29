@@ -1,80 +1,49 @@
 .optional {
-  border-top: 1px solid var(--color-grey370);
-
-  @media (min-width: $tablet-width) {
-    border: none;
-  }
-
   @media (min-width: $desktop-width) {
     margin-bottom: 85px;
   }
 }
 
 .optional__wrapper {
-  max-width: $phone-width;
-  padding: 0 20px;
-  margin: 0 auto;
-  box-sizing: border-box;
+  @include __wrapper-phone;
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
-    padding: 0 30px;
+    @include __wrapper-tablet;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: $desktop-width;
-    padding: 0 110px;
+    @include __wrapper-desktop;
   }
 }
 
 .optional__header {
-  position: relative;
-
-  &::before {
-    width: 100vw;
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    height: 2px;
-    background-color: var(--color-accent);
-    z-index: -1;
-  }
+  @include __header;
 }
 
 .optional__wrapper-title {
-  max-width: $phone-width;
-  padding: 0 20px;
-  margin: 0 auto;
-  box-sizing: border-box;
+  @include __wrapper-phone;
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
-    padding: 0 30px;
+    @include __wrapper-tablet;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: $desktop-width;
-    padding: 0 110px;
+    @include __wrapper-desktop;
   }
 }
 
 .optional__title {
+  @include __title;
+
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
-  position: relative;
-  z-index: 10;
-  width: max-content;
-  margin: 0 -20px;
-  background-color: var(--color-white);
   padding: 25px 20px 36px;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
     padding: 0 40px;
-    margin: 0 -40px 80px;
+    margin: 0 0 80px;
   }
 }

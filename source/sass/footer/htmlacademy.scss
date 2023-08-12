@@ -1,6 +1,6 @@
 .htmlacademy {
   width: 100%;
-  padding: 20px 0;
+  padding: 20px 0 0;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
@@ -19,6 +19,16 @@
   line-height: 20px;
   color: var(--color-grey500);
   text-decoration: none;
+  transition: $transition;
+
+  &:hover .htmlacademy__image path,
+  &:focus-visible .htmlacademy__image path {
+    fill: var(--color-accent);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     justify-content: flex-end;

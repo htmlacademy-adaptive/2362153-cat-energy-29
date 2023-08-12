@@ -12,23 +12,63 @@
   }
 }
 
+.additionally__header {
+  @include __header;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+    padding: 0 70px;
+  }
+}
+
+.additionally__wrapper {
+  @include __wrapper-phone;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+    padding: 0 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include __wrapper-desktop;
+  }
+}
+
+.additionally__wrapper-title {
+  max-width: $phone-width;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include __wrapper-desktop;
+  }
+}
+
 .additionally__title {
-  margin: 0;
-  margin-bottom: 36px;
+  @include __title;
+
   color: var(--color-black);
   font-size: 24px;
   font-weight: 400;
   line-height: 26px;
   text-transform: none;
+  padding: 26px 20px 35px;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 34px;
+    padding: 0 40px;
+    margin: 0 -40px 87px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 57px;
+    margin: 0 -110px 76px;
   }
 }
 
@@ -60,6 +100,23 @@
   position: relative;
   display: grid;
   min-height: 30px;
+  cursor: pointer;
+
+  &:hover .additionally__control-mark {
+    border: 1px solid var(--color-grey390);
+  }
+
+  &:active .additionally__control-mark,
+  &:active .additionally__control-mark ~ span {
+    opacity: 0.6;
+  }
+
+  //Как сделать DISABLED?
+  // &:disabled,
+  // &:disabled .additionally__control-label:disabled {
+  //   opacity: 0.3;
+  //   color: rgb(0, 0, 0, 0.3);
+  // }
 }
 
 .additionally__control-mark {
@@ -77,6 +134,7 @@
   position: absolute;
   top: 50%;
   padding-left: 45px;
+  transform: translateY(-50%);
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -84,15 +142,21 @@
   }
 }
 
-.additionally__input[type="checkbox"]:checked + .additionally__control-mark::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 26px;
-  height: 26px;
-  background-image: url("../img/tick.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  content: "";
-  transform: translateX(-50%) translateY(-50%);
+.additionally__input[type="checkbox"] {
+  &:checked + .additionally__control-mark::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 26px;
+    height: 26px;
+    background-image: url("../img/tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &:focus-visible + .additionally__control-mark {
+    outline: 1px solid var(--color-grey390);
+  }
 }

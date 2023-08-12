@@ -1,18 +1,35 @@
 .target {
   color: var(--color-grey600);
   margin: 0;
-  padding: 22px 0 19px;
+  padding: 0;
   border: none;
-  border-bottom: 1px solid var(--color-grey450);//временно для наглядности
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--color-grey450);
 
   @media (min-width: $tablet-width) {
     border: 1px solid var(--color-grey250);
     padding: 0;
-    margin-bottom: 65px;
+    margin: 0 70px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 0;
+    margin: 0;
+  }
+}
+
+.target__wrapper {
+  @include __wrapper-phone;
+
+  padding-top: 20px;
+  padding-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
   }
 }
 
@@ -30,11 +47,21 @@
 
 .target__control {
   position: relative;
+  color: var(--color-grey600);
   margin-bottom: 13px;
-  cursor: pointer;
   min-height: 15px;
   display: grid;
   align-items: center;
+  cursor: pointer;
+
+  &:hover .target__control-mark {
+    border: 1px solid var(--color-grey390);
+  }
+
+  &:active .target__control-mark,
+  &:active .target__control-mark ~ span {
+    opacity: 0.6;
+  }
 }
 
 .target__control-mark {
@@ -52,16 +79,24 @@
   position: absolute;
   top: 50%;
   padding-left: 45px;
+  transform: translateY(-50%);
+  height: 100%;
 }
 
-.target__input[type="radio"]:checked + .target__control-mark::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 13px;
-  height: 13px;
-  background-color: var(--color-accent);
-  border-radius: 50%;
-  content: "";
-  transform: translateX(-50%) translateY(-50%);
+.target__input[type="radio"] {
+  &:checked + .target__control-mark::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 13px;
+    height: 13px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    content: "";
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &:focus-visible + .target__control-mark {
+    outline: 1px solid var(--color-grey390);
+  }
 }

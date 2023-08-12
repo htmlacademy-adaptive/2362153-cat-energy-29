@@ -29,6 +29,15 @@
   align-items: center;
   padding-bottom: 20px;
 
+  &:hover .main-footer__logo path,
+  &:focus-visible .main-footer__logo path {
+    fill: #3e3e3e;
+  }
+
+  &:active .main-footer__logo path {
+    fill: #6b6b6b;
+  }
+
   @media (min-width: $tablet-width) {
     padding-bottom: 0;
   }

@@ -1,6 +1,16 @@
 .logo {
   display: block;
   text-decoration: none;
+  transition: $transition;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -15,6 +25,13 @@
 
   @media (min-width: $tablet-width) {
     margin-right: 13px;
+    width: 60px;
+    height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 70px;
+    height: 60px;
   }
 }
 

@@ -1,0 +1,40 @@
+@mixin __wrapper-phone {
+  max-width: $phone-width;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@mixin __wrapper-tablet {
+  max-width: $tablet-width;
+  padding: 0 70px;
+}
+
+@mixin __wrapper-desktop {
+  max-width: $desktop-width;
+  padding: 0 110px;
+}
+
+@mixin __header {
+  position: relative;
+
+  &::before {
+    width: 100vw;
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 2px;
+    background-color: var(--color-accent);
+    z-index: -1;
+  }
+}
+
+@mixin __title {
+  position: relative;
+  z-index: 10;
+  width: max-content;
+  margin: 0 -20px;
+  background-color: var(--color-white);
+}

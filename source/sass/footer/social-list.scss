@@ -44,4 +44,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover svg path,
+  &:focus-visible svg path {
+    fill: var(--color-accent);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

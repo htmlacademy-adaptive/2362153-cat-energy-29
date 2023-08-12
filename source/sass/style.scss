@@ -1,8 +1,9 @@
-@import "./global/fonts.scss";
-@import "./global/variables.scss";
-@import "./global/page-body.scss";
-@import "./global/map.scss";
-@import "./global/button.scss";
+@import "global/fonts.scss";
+@import "global/variables.scss";
+@import "global/mixins.scss";
+@import "global/page-body.scss";
+@import "global/map.scss";
+@import "global/button.scss";
 @import "global/visually-hidden.scss";
 
 //HEADER
@@ -19,7 +20,8 @@
 @import "main-index/advantages-card.scss";
 @import "main-index/review.scss";
 @import "main-index/result.scss";
-// @import "main-index/slider.scss"; заготовка под слайдер
+@import "main-index/slider.scss";
+// заготовка под слайдер
 
 //CATALOG
 @import "main-catalog/catalog.scss";

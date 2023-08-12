@@ -1,20 +1,72 @@
 
 .program-card {
+  position: relative;
   background-color: var(--color-grey200);
   padding: 0 20px;
   box-sizing: border-box;
 
+  &::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-accent);
+    top: 20px;
+    left: 20px;
+    border-radius: 50%;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 20px;
+    top: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 77px 310px 57px 53px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 200px;
+      height: 200px;
+      top: 92px;
+      left: 445px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 92px;
+      left: 445px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding: 47px 60px 55px 50px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100px;
+      height: 100px;
+      top: 41px;
+      left: 52px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 41px;
+      left: 52px;
+    }
   }
 }
 
 .program-card__title {
-  position: relative;
   margin: 0;
   padding-top: 30px;
   padding-left: 70px;
@@ -23,75 +75,22 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-  z-index: 1;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 50px;
-    height: 50px;
-    background-color: var(--color-accent);
-    top: 24px;
-    left: 0;
-    border-radius: 50%;
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 24px;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
 
   @media (min-width: $tablet-width) {
     padding: 0;
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 24px;
-
-    &::before {
-      position: absolute;
-      content: "";
-      width: 200px;
-      height: 200px;
-      top: 15px;
-      left: 393px;
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      top: 15px;
-      left: 393px;
-    }
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 30px;
     padding-left: 162px;
     margin-bottom: 73px;
-
-    &::before {
-      position: absolute;
-      content: "";
-      width: 100px;
-      height: 100px;
-      top: 0;
-      left: 0;
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-    }
   }
 }
 
-.program-card__title--slim {
+.program-card--slim {
   &::after {
     width: 36px;
     height: 50px;
@@ -110,9 +109,9 @@
   }
 }
 
-.program-card__title--pro {
+.program-card--pro {
   &::after {
-    top: 50%;
+    top: 30px;
     transform: translate(-10%, 10%);
     width: 67px;
     height: 28px;
@@ -122,13 +121,13 @@
       width: 268px;
       height: 112px;
       bottom: 0;
-      transform: translate(-10%, 40%);
+      transform: translate(-10%, 100%);
     }
 
     @media (min-width: $desktop-width) {
       width: 134px;
       height: 56px;
-      transform: translate(-10%, 0);
+      transform: translate(-10%, 70%);
     }
   }
 }
@@ -155,9 +154,12 @@
 }
 
 .program-card__link {
+  width: max-content;
+  position: relative;
   display: block;
   padding-top: 15px;
   padding-bottom: 18px;
+  padding-right: 47px;
   border-top: 1px solid var(--color-grey350);
   color: var(--color-black);
   text-decoration: none;
@@ -165,9 +167,49 @@
   font-size: 16px;
   line-height: 16px;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 2px;
+    background-color: var(--color-black);
+    transition: all 0.5s ease;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 9px;
+    background-image: url("../../img/triangle.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    transition: all 0.5s ease;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover::before {
+    right: 0;
+    width: 20px;
+  }
+
+  &:hover::after {
+    right: 0;
+  }
+
   @media (min-width: $tablet-width) {
     border-top: none;
-    padding: 0;
+    padding: 0 47px 0 0;
   }
 
   @media (min-width: $desktop-width) {
