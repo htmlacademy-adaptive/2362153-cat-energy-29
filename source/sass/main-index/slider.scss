@@ -6,28 +6,51 @@
   display: flex;
   margin: 0 auto;
   background-color: var(--color-grey300);
-  background-image: url("../img/slider/cat-slim-mobile.png");
+  background-image: url("../img/slider/cat-slim-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: 0 center;
   background-size: cover;
   position: relative;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/slider/cat-slim-mobile@2x.png");
+    background-size: 280px auto;
+  }
+
   @media (min-width: $tablet-width) {
     width: 560px;
     height: 512px;
-    background-image: (url("../img/slider/cat-slim-tablet.png"),
+    background-image: (url("../img/slider/cat-slim-tablet@1x.png"),
     linear-gradient(var(--color-white) 123px, var(--color-grey300) 123px));
     background-size: 560px 512px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: (url("../img/slider/cat-slim-tablet@2x.png"),
+      linear-gradient(var(--color-white) 123px, var(--color-grey300) 123px));
+      background-size: 560px auto;
+    }
   }
 
   @media (min-width: 868px) {
-    background-image: (url("../img/slider/cat-slim-tablet.png"),
+    background-image: (url("../img/slider/cat-slim-tablet@1x.png"),
     linear-gradient(var(--color-white) 134px, var(--color-grey300) 134px));
+
+    @media (min-resolution: 2dppx) {
+      background-image: (url("../img/slider/cat-slim-tablet@2x.png"),
+      linear-gradient(var(--color-white) 134px, var(--color-grey300) 134px));
+      background-size: 560px auto;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    background-image: (url("../img/slider/cat-slim-tablet.png"),
+    background-image: (url("../img/slider/cat-slim-tablet@1x.png"),
     linear-gradient(var(--color-white) 117.5px, var(--color-grey300) 117.5px));
+
+    @media (min-resolution: 2dppx) {
+      background-image: (url("../img/slider/cat-slim-mobile@2x.png"),
+      linear-gradient(var(--color-white) 117.5px, var(--color-grey300) 117.5px));
+      background-size: 560px auto;
+    }
   }
 }
 
@@ -43,43 +66,62 @@
 .slider__input::-webkit-slider-thumb {
   -webkit-appearance: none; /* stylelint-disable-line */
   appearance: none;
-  width: 2px;
+  width: 40px;
   height: 256px;
-  background-color: #666666;
+  // background-color: #666666;
+
   cursor: pointer;
   z-index: 10;
   position: relative;
 
+  background-image: url("../img/slider/thumb-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+
   &:hover {
-    background-color: var(--color-accent);
+    background-image: url("../img/slider/thumb-hover.svg");
+  }
+
+  &:active {
+    background-image: url("../img/slider/thumb-active.svg");
   }
 
   @media (min-width: $tablet-width) {
-    width: 4px;
     height: 512px;
+    background-image: url("../img/slider/thumb-tablet.svg");
+
+    &:hover {
+      background-image: url("../img/slider/thumb-tablet-hover.svg");
+    }
+
+    &:active {
+      background-image: url("../img/slider/thumb-tablet-active.svg");
+    }
   }
 }
 
 //Думаю,как добавить кнопку вместе с линией
 .slider__button {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: none;
-  background-image: url("../img/slider/thumb.svg");
-  background-repeat: no-repeat;
-  background-position: 0 center;
-  background-size: contain;
-  background-color: transparent;
-  z-index: 15;
-  cursor: pointer;
+  display: none;
+  // position: absolute;
+  // width: 40px;
+  // height: 40px;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  // border: none;
+  // background-image: url("../img/slider/thumb.svg");
+  // background-repeat: no-repeat;
+  // background-position: 0 center;
+  // background-size: contain;
+  // background-color: transparent;
+  // z-index: 15;
+  // cursor: pointer;
 
-  &:hover {
-    background-image: url("../img/slider/thumb-accent.svg");
-  }
+  // &:hover {
+  //   background-image: url("../img/slider/thumb-accent.svg");
+  // }
 }
 
 .slider__cat-slim {
@@ -87,26 +129,49 @@
   width: 50%;
   height: 256px;
   background-color: var(--color-grey300);
-  background-image: url("../img/slider/cat-fat-mobile.png");
+  background-image: url("../img/slider/cat-fat-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: 0 center;
   background-size: 0 cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/slider/cat-fat-mobile@2x.png");
+    background-size: 280px auto;
+  }
+
   @media (min-width: $tablet-width) {
     height: 512px;
     background-color: transparent;
-    background-image: (url("../img/slider/cat-fat-tablet.png"),
+    background-image: (url("../img/slider/cat-fat-tablet@1x.png"),
     linear-gradient(var(--color-white) 123px, var(--color-grey300) 123px));
     background-size: 560px 512px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: (url("../img/slider/cat-fat-tablet@2x.png"),
+      linear-gradient(var(--color-white) 123px, var(--color-grey300) 123px));
+      background-size: 560px auto;
+    }
   }
 
   @media (min-width: 868px) {
-    background-image: (url("../img/slider/cat-fat-tablet.png"),
+    background-image: (url("../img/slider/cat-fat-tablet@1x.png"),
     linear-gradient(var(--color-white) 134px, var(--color-grey300) 134px));
+
+    @media (min-resolution: 2dppx) {
+      background-image: (url("../img/slider/cat-fat-tablet@2x.png"),
+      linear-gradient(var(--color-white) 134px, var(--color-grey300) 134px));
+      background-size: 560px auto;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    background-image: (url("../img/slider/cat-fat-tablet.png"),
+    background-image: (url("../img/slider/cat-fat-tablet@1x.png"),
     linear-gradient(var(--color-white) 117.5px, var(--color-grey300) 117.5px));
+
+    @media (min-resolution: 2dppx) {
+      background-image: (url("../img/slider/cat-fat-tablet@2x.png"),
+      linear-gradient(var(--color-white) 117.5px, var(--color-grey300) 117.5px));
+      background-size: 560px auto;
+    }
   }
 }

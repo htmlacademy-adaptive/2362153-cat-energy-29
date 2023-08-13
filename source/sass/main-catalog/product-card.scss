@@ -23,6 +23,10 @@
     gap: 22px;
     margin-bottom: 32px;
   }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 169px;
+  }
 }
 
 .product-card__description-wrapper {
