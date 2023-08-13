@@ -35,5 +35,3 @@ let center = [59.938631, 30.3230374];
     }
 
     ymaps.ready(init);
-
-
