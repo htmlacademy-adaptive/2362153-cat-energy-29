@@ -2,13 +2,25 @@
 .result {
   display: flex;
   gap: 32px;
+
+  @media (min-width: $tablet-width) {
+    gap: 42px;
+  }
 }
 
 .result__wrapper {
+  position: relative;
   display: block;
   margin: auto;
+  width: 100%;
   padding-top: 15px;
-  border: 1px solid #000000;//временно для наглядности
+  border: 1px solid var(--color-grey400);
+  border-radius: 5px;//временно для наглядности
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 162px;
+  }
 }
 
 .result__index-number {
@@ -17,14 +29,63 @@
   font-weight: 400;
   line-height: 24px;
   text-transform: uppercase;
+  margin-bottom: 18px;
 }
 
 .result__index-description {
-  text-align: center;
+  width: 65%;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: 0;
+  padding: 0;
+  text-align: center;
   font-weight: 400;
   color: var(--color-grey500);
   font-family: "Lato", sans-serif;
   font-size: 12px;
   line-height: 100%;
+  background-color: var(--color-grey300);
+
+  @media (min-width: $tablet-width) {
+    width: 80%;
+    background-color: var(--color-white);
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: var(--color-grey300);
+  }
+}
+
+.result__total {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    max-width: 190px;
+    text-align: end;
+    justify-self: end;
+    align-self: center;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+    justify-self: start;
+    max-width: 100%;
+  }
+}
+
+.result__total-price {
+  @media (min-width: $desktop-width) {
+    margin-left: 63px;
+  }
 }

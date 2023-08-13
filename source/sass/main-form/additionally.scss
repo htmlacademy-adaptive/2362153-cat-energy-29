@@ -2,41 +2,160 @@
   margin: 0;
   padding: 0;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 61px;
+  }
+}
+
+.additionally__header {
+  @include __header;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+    padding: 0 70px;
+  }
+}
+
+.additionally__wrapper {
+  @include __wrapper-phone;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include __wrapper-tablet-70;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include __wrapper-desktop;
+  }
+}
+
+.additionally__wrapper-title {
+  max-width: $phone-width;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include __wrapper-desktop;
+  }
 }
 
 .additionally__title {
-  margin: 0;
-  margin-bottom: 36px;
+  @include __title;
+
   color: var(--color-black);
   font-size: 24px;
   font-weight: 400;
   line-height: 26px;
   text-transform: none;
+  padding: 26px 20px 35px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0 40px;
+    margin: 0 -40px 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 -110px 76px;
+  }
 }
 
 .additionally__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 12px;
   margin-bottom: 34px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 80px;
+    margin: 0;
+  }
+
+  @media (min-width: 1100px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .additionally__item {
   width: 100%;
 }
 
-.additivie-item__button {
-  display: block;
-  text-align: center;
-  line-height: 20px;
-  padding: 10px 20px;
-  width: 100%;
-  box-sizing: border-box;
+.additionally__control {
+  position: relative;
+  display: grid;
+  min-height: 30px;
+  cursor: pointer;
+
+  &:hover .additionally__control-mark {
+    border: 1px solid var(--color-grey390);
+  }
+
+  &:active .additionally__control-mark,
+  &:active .additionally__control-mark ~ span {
+    opacity: 0.6;
+  }
+
+  //Как сделать DISABLED?
+  // &:disabled,
+  // &:disabled .additionally__control-label:disabled {
+  //   opacity: 0.3;
+  //   color: rgb(0, 0, 0, 0.3);
+  // }
+}
+
+.additionally__control-mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  top: 0;
+  border: 1px solid var(--color-grey400);
+  background-color: var(--color-white);
 }
 
 .additionally__control-label {
   color: var(--color-black);
+  position: absolute;
+  top: 50%;
+  padding-left: 45px;
+  transform: translateY(-50%);
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 0;
+  }
+}
+
+.additionally__input[type="checkbox"] {
+  &:checked + .additionally__control-mark::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 26px;
+    height: 26px;
+    background-image: url("../img/tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &:focus-visible + .additionally__control-mark {
+    outline: 1px solid var(--color-grey390);
+  }
 }

@@ -1,19 +1,71 @@
 .hero-block {
+  position: relative;
   color: var(--color-white);
   font-weight: 400;
-  //как сделать цвет фона, если не прогрузиться картинка?
-  // background-color: var(--bg-color-accent);
-  text-align: cenтter;
-  background-image: url("../img/hero/hero_background.jpg");
-  background-position: top;
-  background-size: contain;
+  text-align: center;
+  background-image: url("../img/hero/bg-hero-mobile.jpg"),
+    linear-gradient(var(--color-bg-hero) 100%, var(--color-white) 60%);
+  background-size: auto 63%;
+  background-position: center 0;
   background-repeat: no-repeat;
   padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    background: none;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    background: none;
+    margin-bottom: 82px;
+
+    &::before {
+      content: "";
+      min-width: 720px;
+      height: 100%;
+      position: absolute;
+      top: -110px;
+      left: 50%;
+      background-color: var(--color-accent);
+      background-image: url("../img/hero/bg-hero-desktop.jpg"), linear-gradient(var(--color-bg-hero) 100%, var(--color-white) 60%);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right bottom;
+      z-index: -10;
+    }
+  }
 }
 
 .hero-block__wrapper {
-  max-width: 280px;
-  margin: 0 auto;
+  @include __wrapper-phone;
+
+  @media (min-width: $tablet-width) {
+    @include __wrapper-tablet-30;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-height: 875px;
+    background-image: url("../img/hero/hero-tablet.png");
+    background-size: 709px 609px;
+    background-position: 0 266px;
+    background-repeat: no-repeat;
+    text-align: left;
+  }
+
+  @media (min-width: calc($tablet-width + 50px)) {
+    background-position: center 70%;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include __wrapper-desktop;
+
+    background: none;
+    min-height: 0;
+  }
 }
 
 .hero-block__title {
@@ -23,6 +75,21 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 70%;
+    font-size: 60px;
+    line-height: 60px;
+    padding-top: 65px;
+    padding-left: 90px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 110px;
+    padding-left: 80px;
+    max-width: 40%;
+  }
 }
 
 .hero-block__description {
@@ -32,15 +99,58 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    max-width: 40%;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 50px;
+    padding-left: 90px;
+    position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 80px;
+  }
 }
 
 .hero-block__image {
   display: block;
+  position: relative;
   margin: 0 auto;
   margin-bottom: 3px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 552px;
+    height: 499px;
+    transform: translateX(-35%);
+    z-index: -1;
+  }
 }
 
 .hero-block__button {
   display: block;
-  margin: 0;
+  margin: 0 auto;
+  max-width: max-content;
+
+  @media (min-width: $tablet-width) {
+    max-width: 40%;
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 80px;
+    margin-bottom: 183px;
+  }
 }

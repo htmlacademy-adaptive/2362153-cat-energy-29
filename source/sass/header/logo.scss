@@ -1,13 +1,47 @@
 .logo {
+  display: block;
   text-decoration: none;
-  margin-bottom: 15px;
+  transition: $transition;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0;
+  }
 }
 
 .logo__image {
   margin-right: 56px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 13px;
+    width: 60px;
+    height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 70px;
+    height: 60px;
+  }
 }
 
 .logo__text {
   position: absolute;
   padding: 10px 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+  }
 }

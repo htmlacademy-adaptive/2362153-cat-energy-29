@@ -1,7 +1,25 @@
 .programs {
-  max-width: 280px;
-  margin: 0 auto;
   background-color: var(--color-white);
   color: var(--color-black);
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 71px;
+  }
+}
+
+.programs-wrapper {
+  @include __wrapper-phone;
+
+  @media (min-width: $tablet-width) {
+    @include __wrapper-tablet-30;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include __wrapper-desktop;
+  }
 }

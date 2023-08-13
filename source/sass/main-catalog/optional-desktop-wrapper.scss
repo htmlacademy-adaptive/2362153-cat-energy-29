@@ -1,0 +1,28 @@
+.optional-desktop-wrapper {
+  @media (min-width: $desktop-width) {
+    @include __wrapper-desktop;
+
+    display: grid;
+    grid-template-columns: 895px 1fr;
+    gap: 80px;
+    margin: 0 auto;
+    margin-bottom: 87px;
+    box-sizing: border-box;
+  }
+}
+
+.optional-desktop-wrapper__optional {
+  @media (min-width: $desktop-width) {
+    padding: 0;
+
+    grid-column: 1 / 2;
+  }
+}
+
+.optional-desktop-wrapper__promotion {
+  @media (min-width: $desktop-width) {
+    padding: 0;
+
+    grid-column: 2 / 3;
+  }
+}

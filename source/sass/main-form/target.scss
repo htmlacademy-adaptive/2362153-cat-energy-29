@@ -1,27 +1,102 @@
 .target {
   color: var(--color-grey600);
   margin: 0;
-  padding: 22px 0 19px;
+  padding: 0;
   border: none;
-  border-bottom: 1px solid #d9d9d9;//временно для наглядности
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--color-grey450);
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid var(--color-grey250);
+    padding: 0;
+    margin: 0 70px;
+  }
+
+  @media (min-width: 1000px) {
+    margin: 0;
+  }
+}
+
+.target__wrapper {
+  @include __wrapper-phone;
+
+  padding-top: 20px;
+  padding-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
+  }
 }
 
 .target__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: grid;
+  gap: 13px;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 27px;
+  }
 }
 
 .target__control {
   position: relative;
-  display: block;
+  color: var(--color-grey600);
   margin-bottom: 13px;
+  min-height: 15px;
+  display: grid;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover .target__control-mark {
+    border: 1px solid var(--color-grey390);
+  }
+
+  &:active .target__control-mark,
+  &:active .target__control-mark ~ span {
+    opacity: 0.6;
+  }
 }
 
-// .target__control-mark {
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   border: 2px solid var(--color-grey600);
-//   border-radius: 50%;
-// }
+.target__control-mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  top: 0;
+  border: 1px solid var(--color-grey400);
+  border-radius: 50%;
+  background-color: var(--color-white);
+}
+
+.target__control-label {
+  position: absolute;
+  top: 50%;
+  padding-left: 45px;
+  transform: translateY(-50%);
+  height: 100%;
+}
+
+.target__input[type="radio"] {
+  &:checked + .target__control-mark::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 13px;
+    height: 13px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    content: "";
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &:focus-visible + .target__control-mark {
+    outline: 1px solid var(--color-grey390);
+  }
+}

@@ -10,4 +10,17 @@
   line-height: 18px;
   text-transform: uppercase;
   border: none;
+  box-sizing: border-box;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--color-hover);
+  }
+
+  &:active {
+    color: rgb(255, 255, 255, 0.3);
+  }
 }

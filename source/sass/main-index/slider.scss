@@ -1,0 +1,112 @@
+//заготовка под слайдер
+
+.slider {
+  width: 280px;
+  height: 256px;
+  display: flex;
+  margin: 0 auto;
+  background-color: var(--color-grey300);
+  background-image: url("../img/slider/cat-slim-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: cover;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+    background-image: (url("../img/slider/cat-slim-tablet.png"),
+    linear-gradient(var(--color-white) 123px, var(--color-grey300) 123px));
+    background-size: 560px 512px;
+  }
+
+  @media (min-width: 868px) {
+    background-image: (url("../img/slider/cat-slim-tablet.png"),
+    linear-gradient(var(--color-white) 134px, var(--color-grey300) 134px));
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: (url("../img/slider/cat-slim-tablet.png"),
+    linear-gradient(var(--color-white) 117.5px, var(--color-grey300) 117.5px));
+  }
+}
+
+.slider__input {
+  -webkit-appearance: none; /* stylelint-disable-line */
+  appearance: none;
+  width: 100%;
+  background: none;
+  z-index: 10;
+  position: relative;
+}
+
+.slider__input::-webkit-slider-thumb {
+  -webkit-appearance: none; /* stylelint-disable-line */
+  appearance: none;
+  width: 2px;
+  height: 256px;
+  background-color: #666666;
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+
+  &:hover {
+    background-color: var(--color-accent);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 4px;
+    height: 512px;
+  }
+}
+
+//Думаю,как добавить кнопку вместе с линией
+.slider__button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background-image: url("../img/slider/thumb.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: contain;
+  background-color: transparent;
+  z-index: 15;
+  cursor: pointer;
+
+  &:hover {
+    background-image: url("../img/slider/thumb-accent.svg");
+  }
+}
+
+.slider__cat-slim {
+  position: absolute;
+  width: 50%;
+  height: 256px;
+  background-color: var(--color-grey300);
+  background-image: url("../img/slider/cat-fat-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: 0 cover;
+
+  @media (min-width: $tablet-width) {
+    height: 512px;
+    background-color: transparent;
+    background-image: (url("../img/slider/cat-fat-tablet.png"),
+    linear-gradient(var(--color-white) 123px, var(--color-grey300) 123px));
+    background-size: 560px 512px;
+  }
+
+  @media (min-width: 868px) {
+    background-image: (url("../img/slider/cat-fat-tablet.png"),
+    linear-gradient(var(--color-white) 134px, var(--color-grey300) 134px));
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: (url("../img/slider/cat-fat-tablet.png"),
+    linear-gradient(var(--color-white) 117.5px, var(--color-grey300) 117.5px));
+  }
+}

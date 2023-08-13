@@ -1,10 +1,34 @@
 .map__title-wrapper {
+  @include __wrapper-phone;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 280px;
-  margin: 0 auto;
-  padding: 26px 0;
+  padding-top: 26px;
+  padding-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    @include __wrapper-tablet-30;
+
+    padding-top: 61px;
+    padding-bottom: 61px;
+  }
+
+  @media (min-width: 800px) {
+    max-width: 80%;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include __wrapper-desktop;
+
+    position: absolute;
+    z-index: 10;
+    background-color: var(--color-white);
+    padding: 60px 80px;
+    margin-top: 95px;
+    margin-left: 110px;
+    gap: 80px;
+  }
 }
 
 .map__title {
@@ -14,6 +38,16 @@
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 170px;
+  }
+
+  @media (min-width: 800px) {
+    max-width: 30%;
+  }
 }
 
 .map__description {
@@ -24,19 +58,62 @@
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    max-width: 160px;
+    text-align: right;
+  }
+
+  @media (min-width: 800px) {
+    max-width: 30%;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 }
 
-.map__frame--image {
-  margin: 0;
-  width: 100%;
-  min-height: 362px;
-  background-image: url("../img/map.png");
-  background-position: center;
-  background-repeat: no-repeat;
+.map__frame {
+  margin: 0 auto;
+  width: 100vw;
+  height: 362px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+}
+
+.map__frame-image {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100vw;
+  min-height: 352px;
   background-size: cover;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    min-height: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
 }
 
 .map--basic {
   background-color: var(--color-grey200);
+}
+
+.map__city {
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-top: 19px;
+  }
+}
+
+//Настройки карты яндекс
+.map__frame .popup {
+  visibility: hidden;
 }
