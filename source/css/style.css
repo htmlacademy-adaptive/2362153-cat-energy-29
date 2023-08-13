@@ -934,7 +934,7 @@
   transform: translate(-50%, -50%);
   width: 12px;
   height: 9px;
-  background-image: url("../../img/triangle.svg");
+  background-image: url("../img/triangle.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
