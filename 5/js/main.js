@@ -19,7 +19,7 @@ let center = [59.938631, 30.3230374];
 
         let placemark = new ymaps.Placemark(center, {}, {
           iconLayout: "default#image",
-          iconImageHref: "../img/logo_map.svg",
+          iconImageHref: "img/logo_map.svg",
           iconImageSize: [52, 52],
           iconImageOffset: [-19, -44]
         });
