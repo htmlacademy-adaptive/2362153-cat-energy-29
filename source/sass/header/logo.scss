@@ -38,8 +38,10 @@
 .logo__text {
   position: absolute;
   padding: 10px 0;
+  left: 50%;
+  transform: translateX(-50%);
 
   @media (min-width: $tablet-width) {
-    position: static;
+    position: relative;
   }
 }

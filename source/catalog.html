@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/16x16.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/180x180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.css">
     <title>Каталог</title>
   </head>
@@ -291,65 +295,68 @@
         </div>
       </section>
 
-      <section class="optional">
-        <div class="optional__header">
-          <div class="optional__wrapper-title">
-            <h2 class="optional__title">Дополнительные товары</h2>
-          </div>
+      <div class="optional-header">
+        <div class="optional-header__wrapper-title">
+          <h2 class="optional-header__title">Дополнительные товары</h2>
         </div>
-        <div class="optional__wrapper">
-          <ul class="optional__list additives-list">
-            <li class="additive-list__item additive-item">
-              <h3 class="additive-item__title">Сахарозаменитель</h3>
-              <dl class="additive-item__attributes">
-                <dt class="additive-item__definition">1 упаковка (100 г)</dt>
-                <dd class="additive-item__value">200 ₽</dd>
-              </dl>
-              <button class="additivie-item__button button" type="button">заказать</button>
-            </li>
-            <li class="additive-list__item additive-item">
-              <h3 class="additive-item__title">питьевая вода</h3>
-              <dl class="additive-item__attributes">
-                <dt class="additive-item__definition">5 литров</dt>
-                <dd class="additive-item__value">50 ₽</dd>
-              </dl>
-              <button class="additivie-item__button button" type="button">заказать</button>
-            </li>
-            <li class="additive-list__item additive-item">
-              <h3 class="additive-item__title">молоко</h3>
-              <dl class="additive-item__attributes">
-                <dt class="additive-item__definition">1 литр</dt>
-                <dd class="additive-item__value">100 ₽</dd>
-              </dl>
-              <button class="additivie-item__button button" type="button">заказать</button>
-            </li>
-            <li class="additive-list__item additive-item">
-              <h3 class="additive-item__title">витамины</h3>
-              <dl class="additive-item__attributes">
-                <dt class="additive-item__definition">1 упаковка (30 г)</dt>
-                <dd class="additive-item__value">300 ₽</dd>
-              </dl>
-              <button class="additivie-item__button button" type="button">заказать</button>
-            </li>
-          </ul>
-        </div>
-      </section>
+      </div>
+      <div class="optional-desktop-wrapper">
+        <section class="optional-desktop-wrapper__optional optional">
 
-      <section class="promotion">
-        <div class="promotion__wrapper">
-          <h2 class="visually-hidden">Акционное предложение</h2>
-          <span class="promotion__gift"></span>
-          <p class="promotion__description">Закажите все <br>
-            и получите чехол для <br>
-            кота в подарок!</p>
-        </div>
-      </section>
+          <div class="optional__wrapper">
+            <ul class="optional__list additives-list">
+              <li class="additive-list__item additive-item">
+                <h3 class="additive-item__title">Сахарозаменитель</h3>
+                <dl class="additive-item__attributes">
+                  <dt class="additive-item__definition">1 упаковка (100 г)</dt>
+                  <dd class="additive-item__value">200 ₽</dd>
+                </dl>
+                <button class="additivie-item__button button" type="button">заказать</button>
+              </li>
+              <li class="additive-list__item additive-item">
+                <h3 class="additive-item__title">питьевая вода</h3>
+                <dl class="additive-item__attributes">
+                  <dt class="additive-item__definition">5 литров</dt>
+                  <dd class="additive-item__value">50 ₽</dd>
+                </dl>
+                <button class="additivie-item__button button" type="button">заказать</button>
+              </li>
+              <li class="additive-list__item additive-item">
+                <h3 class="additive-item__title">молоко</h3>
+                <dl class="additive-item__attributes">
+                  <dt class="additive-item__definition">1 литр</dt>
+                  <dd class="additive-item__value">100 ₽</dd>
+                </dl>
+                <button class="additivie-item__button button" type="button">заказать</button>
+              </li>
+              <li class="additive-list__item additive-item">
+                <h3 class="additive-item__title">витамины</h3>
+                <dl class="additive-item__attributes">
+                  <dt class="additive-item__definition">1 упаковка (30 г)</dt>
+                  <dd class="additive-item__value">300 ₽</dd>
+                </dl>
+                <button class="additivie-item__button button" type="button">заказать</button>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="optional-desktop-wrapper__promotion promotion">
+          <div class="promotion__wrapper">
+            <h2 class="visually-hidden">Акционное предложение</h2>
+            <span class="promotion__gift"></span>
+            <p class="promotion__description">Закажите все <br>
+              и получите чехол для <br>
+              кота в подарок!</p>
+          </div>
+        </section>
+      </div>
 
       <section class="map map--basic">
         <div class="map__title-wrapper">
           <h2 class="map__title">приглашаем к сотрудничеству дилеров!</h2>
           <address class="map__description">ул. Большая
-            Конюшенная, д. 19/8
+            Конюшенная, д. 19/8 <br>
             Санкт-Петербург</address>
         </div>
         <div id="map-test" class="map__frame"></div>

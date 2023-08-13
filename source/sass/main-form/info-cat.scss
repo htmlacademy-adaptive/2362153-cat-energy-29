@@ -22,8 +22,11 @@
   gap: 14px;
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
-    padding: 0 70px;
+    @include __wrapper-tablet-70;
+  }
+
+  @media (min-width: 1000px) {
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {

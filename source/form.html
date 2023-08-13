@@ -4,6 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/16x16.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
   <title>Подбор программы</title>
 </head>
@@ -44,7 +48,7 @@
       </div>
         <form class="form-cat__data form" action="https://echo.htmlacademy.ru" method="get">
           <div class="form-cat__wrapper-info">
-            <div class="form__info info-cat">
+            <div class="form-cat__info-cat info-cat">
               <div class="info-cat__wrapper">
                 <div class="info-cat__item">
                   <label class="info-cat__control" for="cat-name"> имя* </label>
@@ -61,7 +65,7 @@
               </div>
             </div>
 
-            <fieldset class="form__info target">
+            <fieldset class="form-cat__target target">
               <legend class="visually-hidden">Цель питания:</legend>
               <div class="target__wrapper">
                 <ul class="target__list">
@@ -98,12 +102,12 @@
               </div>
             </div>
             <div class="owner__wrapper">
-              <div class="owner__item">
+              <div class="owner__item owner__item--mail">
                 <label class="owner__control" for="email">E-mail:*</label>
                 <input class="owner__field" type="email" name="email" id="email" placeholder="kuklachev@gmail.com"
                   required>
               </div>
-              <div class="owner__item">
+              <div class="owner__item owner__item--phone">
                 <label class="owner__control" for="phone">Телефон:*</label>
                 <input class="owner__field" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
               </div>
@@ -172,7 +176,7 @@
       <div class="map__title-wrapper">
         <h2 class="map__title">приглашаем к сотрудничеству дилеров!</h2>
         <address class="map__description">ул. Большая
-          Конюшенная, д. 19/8
+          Конюшенная, д. 19/8 <br>
           <span class="map__city">Санкт-Петербург</span></address>
       </div>
       <div id="map-test" class="map__frame"></div>

@@ -3,23 +3,27 @@
 }
 
 .main-footer__wrapper {
+  @include __wrapper-phone;
+
   display: grid;
-  max-width: $phone-width;
-  padding: 40px 20px;
-  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
-    padding: 61px 30px;
-    margin: 0 auto;
+    @include __wrapper-tablet-30;
+
+    padding-bottom: 60px;
+    padding-top: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: $desktop-width;
-    padding: 66px 110px;
+    @include __wrapper-desktop;
+
+    padding-top: 66px;
+    padding-bottom: 66px;
   }
 }
 

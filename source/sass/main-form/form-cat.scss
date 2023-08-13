@@ -6,24 +6,20 @@
 }
 
 .form-cat__wrapper {
-  max-width: $phone-width;
-  padding: 0 20px;
-  margin: 0 auto;
+  @include __wrapper-phone;
+
   color: var(--color-grey500);
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
-  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
-    padding: 0 70px;
+    @include __wrapper-tablet-70;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: $desktop-width;
-    padding: 0 110px;
+    @include __wrapper-desktop;
   }
 }
 
@@ -93,7 +89,7 @@
   @include __wrapper-phone;
 
   @media (min-width: $tablet-width) {
-    @include __wrapper-tablet;
+    @include __wrapper-tablet-70;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -121,7 +117,6 @@
 
 .form-cat__wrapper-info {
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
     display: grid;
     grid-template-columns: 1fr;
     gap: 72px;
@@ -131,11 +126,19 @@
     border-bottom: none;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: 1000px) {
     max-width: $desktop-width;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     margin-bottom: 70px;
+    padding: 0 70px;
+  }
+
+  @media (min-width: $desktop-width) {
     padding: 0 110px;
   }
+}
+
+.form-cat__info-cat {
+  width: 100%;
 }

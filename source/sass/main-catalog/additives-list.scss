@@ -1,14 +1,23 @@
 .additives-list {
   position: relative;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   list-style-type: none;
 
   @media (min-width: $tablet-width) {
     border: 1px solid var(--color-grey400);
   }
 
+  @media (min-width: 900px) {
+    max-width: 90%;
+  }
+
+  @media (min-width: 1000px) {
+    max-width: 80%;
+  }
+
   @media (min-width: $desktop-width) {
+    margin: 0;
     max-width: 895px;
     border: none;
     border-bottom: 1px solid var(--color-grey400);

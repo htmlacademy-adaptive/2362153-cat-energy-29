@@ -2,15 +2,20 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    width: $tablet-width;
-    padding: 0 30px;
+    @include __wrapper-tablet-30;
+
     box-sizing: border-box;
     margin: 0 auto;
   }
 
+  @media (min-width: 1000px) {
+    max-width: 80%;
+  }
+
   @media (min-width: $desktop-width) {
-    width: $desktop-width;
-    padding: 0 110px;
+    max-width: 100%;
+    height: 100%;
+    padding: 0;
   }
 }
 
@@ -34,14 +39,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    position: absolute;
-    top: -376px;
-    right: 110px;
-    width: 245px;
-    min-height: 288px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     margin: 0;
-    display: block;
-    padding: 55px 40px 42px;
+    height: 100%;
+    padding: 56px 42px 43px;
   }
 }
 
@@ -80,10 +83,5 @@
     height: 82px;
     margin: 0;
     padding: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0 auto;
-    margin-bottom: 46px;
   }
 }

@@ -2,6 +2,11 @@
   padding: 19px 20px 25px;
   box-sizing: border-box;
 
+  @media (min-width: 530px) {
+    max-width: 530px;
+    margin: 0 auto;
+  }
+
   @media (min-width: $tablet-width) {
     background-color: var(--bg-color-basic);
     padding: 0 38px 39px;

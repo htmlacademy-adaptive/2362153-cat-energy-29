@@ -4,19 +4,22 @@
 }
 
 .catalog__wrapper {
-  max-width: $phone-width;
+  max-width: calc($tablet-width - 1px);
   margin: 0 auto;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
-    padding: 0 30px;
+    @include __wrapper-tablet-30;
+
     margin-bottom: 68px;
   }
 
+  @media (min-width: 900px) {
+    padding: 0 10%;
+  }
+
   @media (min-width: $desktop-width) {
-    max-width: $desktop-width;
-    padding: 0 110px;
+    @include __wrapper-desktop;
   }
 }
 

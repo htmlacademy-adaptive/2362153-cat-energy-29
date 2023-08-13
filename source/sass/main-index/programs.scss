@@ -16,8 +16,7 @@
   @include __wrapper-phone;
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
-    padding: 0 30px;
+    @include __wrapper-tablet-30;
   }
 
   @media (min-width: $desktop-width) {

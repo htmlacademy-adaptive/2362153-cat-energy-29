@@ -29,25 +29,21 @@
       top: -110px;
       left: 50%;
       background-color: var(--color-accent);
-      background-image: url("../img/hero/bg-hero-desktop.jpg"),
-      linear-gradient(var(--color-bg-hero) 100%, var(--color-white) 60%);
+      background-image: url("../img/hero/bg-hero-desktop.jpg"), linear-gradient(var(--color-bg-hero) 100%, var(--color-white) 60%);
       background-repeat: no-repeat;
       background-size: contain;
-      background-position: bottom;
+      background-position: right bottom;
       z-index: -10;
     }
   }
 }
 
 .hero-block__wrapper {
-  max-width: $phone-width;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
+  @include __wrapper-phone;
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
-    padding: 0 30px;
+    @include __wrapper-tablet-30;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -60,9 +56,13 @@
     text-align: left;
   }
 
+  @media (min-width: calc($tablet-width + 50px)) {
+    background-position: center 70%;
+  }
+
   @media (min-width: $desktop-width) {
-    max-width: $desktop-width;
-    padding: 0 110px;
+    @include __wrapper-desktop;
+
     background: none;
     min-height: 0;
   }
@@ -138,7 +138,8 @@
 
 .hero-block__button {
   display: block;
-  margin: 0;
+  margin: 0 auto;
+  max-width: max-content;
 
   @media (min-width: $tablet-width) {
     max-width: 40%;

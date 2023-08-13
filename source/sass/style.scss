@@ -21,7 +21,6 @@
 @import "main-index/review.scss";
 @import "main-index/result.scss";
 @import "main-index/slider.scss";
-// заготовка под слайдер
 
 //CATALOG
 @import "main-catalog/catalog.scss";
@@ -32,6 +31,8 @@
 @import "main-catalog/optional.scss";
 @import "main-catalog/show-more.scss";
 @import "main-catalog/promotion.scss";
+@import "main-catalog/optional-desktop-wrapper.scss";
+@import "main-catalog/optional-header.scss";
 
 //FORM
 @import "main-form/additionally.scss";

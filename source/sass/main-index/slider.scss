@@ -1,7 +1,7 @@
 //заготовка под слайдер
 
 .slider {
-  width: 100%;
+  width: 280px;
   height: 256px;
   display: flex;
   margin: 0 auto;
@@ -9,7 +9,7 @@
   background-image: url("../img/slider/cat-slim-mobile.png");
   background-repeat: no-repeat;
   background-position: 0 center;
-  background-size: 0 cover;
+  background-size: cover;
   position: relative;
 
   @media (min-width: $tablet-width) {
@@ -18,6 +18,11 @@
     background-image: (url("../img/slider/cat-slim-tablet.png"),
     linear-gradient(var(--color-white) 123px, var(--color-grey300) 123px));
     background-size: 560px 512px;
+  }
+
+  @media (min-width: 868px) {
+    background-image: (url("../img/slider/cat-slim-tablet.png"),
+    linear-gradient(var(--color-white) 134px, var(--color-grey300) 134px));
   }
 
   @media (min-width: $desktop-width) {
@@ -93,6 +98,11 @@
     background-image: (url("../img/slider/cat-fat-tablet.png"),
     linear-gradient(var(--color-white) 123px, var(--color-grey300) 123px));
     background-size: 560px 512px;
+  }
+
+  @media (min-width: 868px) {
+    background-image: (url("../img/slider/cat-fat-tablet.png"),
+    linear-gradient(var(--color-white) 134px, var(--color-grey300) 134px));
   }
 
   @media (min-width: $desktop-width) {

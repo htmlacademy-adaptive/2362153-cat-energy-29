@@ -18,20 +18,23 @@
 }
 
 .review__wrapper {
-  max-width: $phone-width;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
+  @include __wrapper-phone;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 570px) {
+    grid-template-columns: 1fr 1fr;
+  }
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
-    padding: 0 30px;
+    @include __wrapper-tablet-30;
+    grid-template-columns: 1fr;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: $desktop-width;
-    padding: 0 110px;
-    display: grid;
+    @include __wrapper-desktop;
+
     grid-template-columns: 500px 1fr;
   }
 }
@@ -43,6 +46,10 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: 570px) {
+    grid-column: 1 / 3;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -68,6 +75,10 @@
   font-size: 14px;
   line-height: 18px;
 
+  @media (min-width: 570px) {
+    grid-column: 1 / 2;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
@@ -85,6 +96,10 @@
   align-items: center;
   justify-content: space-between;
   grid-template-columns: 1fr;
+
+  @media (min-width: 570px) {
+    grid-column: 1 / 2;
+  }
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 366px 1fr;
@@ -116,20 +131,31 @@
   padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
-    // временно до темы оптимизации картинок
     width: 560px;
     height: 512px;
     padding-bottom: 100px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 2/3;
+    grid-column: 2 / 3;
     grid-row: 1 / 4;
     padding-bottom: 85px;
   }
 }
 
 .review__slider {
-  grid-column: 2 /3;
-  grid-row: 1 / 4;
+  @media (min-width: 570px) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 /3;
+    grid-row: 1 / 4;
+  }
 }

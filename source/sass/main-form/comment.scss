@@ -24,8 +24,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
-    padding: 0 70px;
+    @include __wrapper-tablet-70;
   }
 
   @media (min-width: $desktop-width) {

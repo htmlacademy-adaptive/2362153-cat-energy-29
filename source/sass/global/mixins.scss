@@ -1,13 +1,18 @@
 @mixin __wrapper-phone {
-  max-width: $phone-width;
+  max-width: calc($tablet-width - 1px);
   padding: 0 20px;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-@mixin __wrapper-tablet {
-  max-width: $tablet-width;
+@mixin __wrapper-tablet-70 {
+  max-width: calc($desktop-width - 1px);
   padding: 0 70px;
+}
+
+@mixin __wrapper-tablet-30 {
+  max-width: calc($desktop-width - 1px);
+  padding: 0 30px;
 }
 
 @mixin __wrapper-desktop {

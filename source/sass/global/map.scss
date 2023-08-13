@@ -1,18 +1,26 @@
 .map__title-wrapper {
+  @include __wrapper-phone;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: $phone-width;
-  margin: 0 auto;
-  padding: 26px 20px;
-  box-sizing: border-box;
+  padding-top: 26px;
+  padding-bottom: 26px;
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
-    padding: 61px 70px;
+    @include __wrapper-tablet-30;
+
+    padding-top: 61px;
+    padding-bottom: 61px;
+  }
+
+  @media (min-width: 800px) {
+    max-width: 80%;
   }
 
   @media (min-width: $desktop-width) {
+    @include __wrapper-desktop;
+
     position: absolute;
     z-index: 10;
     background-color: var(--color-white);
@@ -36,6 +44,10 @@
     line-height: 26px;
     max-width: 170px;
   }
+
+  @media (min-width: 800px) {
+    max-width: 30%;
+  }
 }
 
 .map__description {
@@ -51,6 +63,10 @@
     font-size: 16px;
     max-width: 160px;
     text-align: right;
+  }
+
+  @media (min-width: 800px) {
+    max-width: 30%;
   }
 
   @media (min-width: $desktop-width) {
