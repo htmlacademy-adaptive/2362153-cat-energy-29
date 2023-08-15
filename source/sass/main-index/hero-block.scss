@@ -5,10 +5,15 @@
   text-align: center;
   background-image: url("../img/hero/bg-hero-mobile.jpg"),
     linear-gradient(var(--color-bg-hero) 100%, var(--color-white) 60%);
-  background-size: auto 63%;
+  background-size: auto 63.5%;
   background-position: center 0;
   background-repeat: no-repeat;
   padding-bottom: 20px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero/bg-hero-mobile@2x.jpg"), linear-gradient(var(--color-bg-hero) 100%, var(--color-white) 60%);
+    background-size: auto 63.5%;
+  }
 
   @media (min-width: $tablet-width) {
     background: none;
@@ -34,6 +39,11 @@
       background-size: contain;
       background-position: right bottom;
       z-index: -10;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/hero/bg-hero-desktop@2x.jpg"), linear-gradient(var(--color-bg-hero) 100%, var(--color-white) 60%);
+        background-size: contain;
+      }
     }
   }
 }

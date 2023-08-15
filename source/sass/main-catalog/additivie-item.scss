@@ -10,6 +10,7 @@
     padding: 26px 38px 28px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
 
     &:first-child {
       border-top: none;
