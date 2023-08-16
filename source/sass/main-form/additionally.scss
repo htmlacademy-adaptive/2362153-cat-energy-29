@@ -14,11 +14,6 @@
 
 .additionally__header {
   @include __header;
-
-  @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
-    padding: 0 70px;
-  }
 }
 
 .additionally__wrapper {
@@ -35,13 +30,11 @@
 }
 
 .additionally__wrapper-title {
-  max-width: $phone-width;
-  padding: 0 20px;
-  box-sizing: border-box;
+  @include __wrapper-phone;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
-    padding: 0;
+    @include __wrapper-tablet-70;
   }
 
   @media (min-width: $desktop-width) {
@@ -67,7 +60,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 -110px 76px;
+    margin: 0 -40px 76px;
   }
 }
 

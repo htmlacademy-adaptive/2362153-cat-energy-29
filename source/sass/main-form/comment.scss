@@ -12,11 +12,6 @@
 
 .comment__header {
   @include __header;
-
-  @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
-    padding: 0 70px;
-  }
 }
 
 .comment__wrapper {
@@ -33,13 +28,10 @@
 }
 
 .comment__wrapper-title {
-  max-width: $phone-width;
-  padding: 0 20px;
-  box-sizing: border-box;
+  @include __wrapper-phone;
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
-    padding: 0;
+    @include __wrapper-tablet-70;
   }
 
   @media (min-width: $desktop-width) {
@@ -65,7 +57,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 -110px 76px;
+    margin: 0 -40px 76px;
   }
 }
 

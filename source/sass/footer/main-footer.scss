@@ -33,8 +33,8 @@
   align-items: center;
   padding-bottom: 20px;
 
-  &:hover .main-footer__logo path,
-  &:focus-visible .main-footer__logo path {
+  &:hover .main-footer__logo,
+  &:focus-visible .main-footer__logo {
     fill: #3e3e3e;
   }
 

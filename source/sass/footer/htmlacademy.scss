@@ -21,7 +21,8 @@
   text-decoration: none;
   transition: $transition;
 
-  &:hover .htmlacademy__image {
+  &:hover .htmlacademy__image,
+  &:focus-visible .htmlacademy__image {
     fill: var(--color-accent);
   }
 
