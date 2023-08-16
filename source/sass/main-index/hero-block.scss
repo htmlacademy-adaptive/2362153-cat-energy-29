@@ -23,27 +23,17 @@
   }
 
   @media (min-width: $desktop-width) {
-    background: none;
+    background-image: url("../img/hero/bg-hero-desktop.jpg"), linear-gradient(to left, var(--color-bg-hero) 50%, #ffffff 50%);
+    background-repeat: no-repeat;
+    background-position: bottom right;
     margin-bottom: 82px;
+    margin-top: -123px;
+    padding-top: 123px;
+    z-index: -1;
 
-    &::before {
-      content: "";
-      min-width: 720px;
-      height: 100%;
-      position: absolute;
-      top: -110px;
-      left: 50%;
-      background-color: var(--color-accent);
-      background-image: url("../img/hero/bg-hero-desktop.jpg"), linear-gradient(var(--color-bg-hero) 100%, var(--color-white) 60%);
-      background-repeat: no-repeat;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero/bg-hero-desktop@2x.jpg"), linear-gradient(var(--color-bg-hero) 100%, var(--color-white) 60%);
       background-size: contain;
-      background-position: right bottom;
-      z-index: -10;
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/hero/bg-hero-desktop@2x.jpg"), linear-gradient(var(--color-bg-hero) 100%, var(--color-white) 60%);
-        background-size: contain;
-      }
     }
   }
 }
@@ -137,7 +127,7 @@
   @media (min-width: $desktop-width) {
     display: block;
     position: absolute;
-    top: 0;
+    top: 123px;
     left: 50%;
     width: 552px;
     height: 499px;

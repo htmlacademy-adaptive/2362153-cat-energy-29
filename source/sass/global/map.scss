@@ -1,3 +1,11 @@
+.map__wrapper {
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+    position: relative;
+    margin: 0 auto;
+  }
+}
+
 .map__title-wrapper {
   @include __wrapper-phone;
 
@@ -15,21 +23,20 @@
   }
 
   @media (min-width: 800px) {
-    max-width: 80%;
+    position: relative;
   }
 
   @media (min-width: $desktop-width) {
     width: 565px;
-
     position: absolute;
+    margin-top: 95px;
+    left: 110px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    z-index: 10;
     background-color: var(--color-white);
     padding: 60px 78px 60px 80px;
-    margin-top: 95px;
-    margin-left: 110px;
     gap: 80px;
+    z-index: 10;
   }
 }
 
@@ -91,24 +98,6 @@
   }
 }
 
-.map__frame-image {
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-  width: 100vw;
-  min-height: 352px;
-  background-size: cover;
-  border: none;
-
-  @media (min-width: $tablet-width) {
-    min-height: 400px;
-  }
-
-  @media (min-width: $desktop-width) {
-    position: relative;
-  }
-}
-
 .map--basic {
   background-color: var(--color-grey200);
 }
@@ -119,12 +108,6 @@
     margin-top: 19px;
   }
 }
-
-//Настройки карты яндекс
-.map__frame .popup {
-  visibility: hidden;
-}
-
 
 .map__google-none {
   display: none;

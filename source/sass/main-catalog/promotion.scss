@@ -21,30 +21,47 @@
 
 .promotion__wrapper {
   background-color: var(--color-accent);
-  background-image: url("../img/promotion/bg-promotion.jpg");
+  background-image: url("../img/promotion/bg-promotion-mobile.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin: 35px 20px;
   box-sizing: border-box;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/promotion/bg-promotion-mobile@2x.jpg");
+    background-size: cover;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
+    background-image: url("../img/promotion/bg-promotion-tablet.jpg");
     margin: 69px 0 76px;
     padding-left: 77px;
     padding-right: 125px;
     align-items: center;
     justify-content: space-between;
     min-height: 200px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promotion/bg-promotion-tablet@2x.jpg");
+      background-size: cover;
+    }
   }
 
   @media (min-width: $desktop-width) {
+    background-image: url("../img/promotion/bg-promotion-desktop.jpg");
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 0;
     height: 100%;
     padding: 56px 42px 43px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promotion/bg-promotion-desktop@2x.jpg");
+      background-size: cover;
+    }
   }
 }
 

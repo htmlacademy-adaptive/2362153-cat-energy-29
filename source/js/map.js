@@ -24,7 +24,6 @@ mapGoogle.classList.add("map__google-none");
         myMap.controls.remove("typeSelector");
         myMap.controls.remove("fullscreenControl");
         myMap.controls.remove("zoomControl");
-        myMap.behaviors.disable("scrollZoom");
         myMap.geoObjects.add(placemark320);
       }
 
@@ -47,7 +46,6 @@ mapGoogle.classList.add("map__google-none");
       myMap.controls.remove("typeSelector");
       myMap.controls.remove("fullscreenControl");
       myMap.controls.remove("zoomControl");
-      myMap.behaviors.disable("scrollZoom");
       myMap.geoObjects.add(placemark768);
     }
 
