@@ -18,6 +18,10 @@
   @media (min-width: $tablet-width) {
     @include __wrapper-tablet-70;
   }
+
+  @media (min-width: $desktop-width) {
+    @include __wrapper-desktop;
+  }
 }
 
 .owner__wrapper-title {
@@ -86,42 +90,21 @@
   align-items: baseline;
   width: 100%;
   position: relative;
-}
 
-.owner__item--mail {
-  &::before {
-    position: absolute;
-    content: "";
-    width: 20px;
-    height: 20px;
-    top: 50%;
-    right: 14px;
-    transform: translateY(-50%);
-    background-image: url("../img/form/mail.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+  &:focus-within .owner__icon svg {
+    stroke: var(--color-accent);
   }
 }
 
-.owner__item--phone {
-  &::before {
-    position: absolute;
-    content: "";
-    width: 20px;
-    height: 20px;
-    top: 50%;
-    right: 14px;
-    transform: translateY(-50%);
-    background-image: url("../img/form/phone.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-  }
+.owner__icon {
+  position: absolute;
+  top: 16px;
+  right: 14px;
 }
 
 .owner__control {
   margin-right: 13px;
+  max-width: 50%;
 }
 
 .owner__field {
@@ -139,15 +122,10 @@
     border: 1px solid var(--color-grey400);
   }
 
-  &:focus-visible:required:invalid {
-    outline: 2px solid #ff8282;
-    outline-offset: -2px;
-    background-color: var(--color-white);
-  }
-
-  &:active:required:invalid {
+  &:focus-visible {
     outline: 2px solid var(--color-grey500);
     outline-offset: -2px;
     background-color: var(--color-white);
+    border-radius: 0;
   }
 }

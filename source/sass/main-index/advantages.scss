@@ -38,6 +38,7 @@
   @media (min-width: $tablet-width) {
     justify-content: space-between;
     gap: 37px;
+    counter-reset: number;
   }
 }
 

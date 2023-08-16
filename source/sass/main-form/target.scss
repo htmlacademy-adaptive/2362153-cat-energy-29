@@ -41,14 +41,17 @@
   gap: 13px;
 
   @media (min-width: $tablet-width) {
-    padding: 30px 27px;
+    padding: 23px 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 25px 27px;
   }
 }
 
 .target__control {
   position: relative;
   color: var(--color-grey600);
-  margin-bottom: 13px;
   min-height: 15px;
   display: grid;
   align-items: center;
@@ -65,7 +68,7 @@
 }
 
 .target__control-mark {
-  position: absolute;
+  position: relative;
   width: 30px;
   height: 30px;
   left: 0;

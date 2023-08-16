@@ -1,0 +1,10 @@
+.field-error {
+  &:focus-within input svg {
+    stroke: var(--color--error);
+  }
+
+  &:focus-within input {
+    outline: 2px solid var(--color--error);
+    border: none;
+  }
+}

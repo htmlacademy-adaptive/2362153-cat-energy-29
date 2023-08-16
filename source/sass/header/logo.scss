@@ -44,4 +44,9 @@
   @media (min-width: $tablet-width) {
     position: relative;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 118px;
+    height: 24px;
+  }
 }
