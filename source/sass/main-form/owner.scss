@@ -87,8 +87,16 @@
 
 .owner__icon {
   position: absolute;
-  top: 16px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 14px;
+}
+
+.owner__icon svg {
+  fill: none;
+  stroke: var(--color-black);
+  display: flex;
+  align-items: center;
 }
 
 .owner__control {

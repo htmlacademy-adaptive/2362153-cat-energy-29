@@ -33,12 +33,15 @@
 }
 
 .catalog__title {
-  margin: 0;
+  margin: 0 auto;
   display: block;
-  border-bottom: 1px solid --color-grey370;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: calc($phone-width + 1px)) {
+    text-align: center;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 65px 0 84px;

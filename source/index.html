@@ -19,17 +19,17 @@
     <header class="main-header">
       <div class="main-header__wrapper main-header__wrapper--index-mobile">
         <a class="main-header__logo logo" href="#" aria-label="Логотип CatEnergy">
-          <img class="logo__image" src="img/logo/logo-img-mobile.svg" width="33" height="38" alt="Логотип компании в виде картинки супер-пёс.">
+          <img class="logo__image" src="img/logo/logo-img.svg" width="33" height="38" alt="Логотип компании в виде картинки супер-пёс.">
           <picture>
-            <source media="(min-width: 768px)" srcset="img/logo/logo-text-grey.svg">
-            <img class="logo__text" src="img/logo/logo-text-black.svg" width="101" height="18" alt="Логотип компании в виде текста Cat Energy.">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-text-444.svg">
+            <img class="logo__text" src="img/logo/logo-text-000.svg" width="101" height="18" alt="Логотип компании в виде текста Cat Energy.">
           </picture>
         </a>
         <!-- Для кнопки бургер меню/крестик: классы main-header__toggle--opened и main-header__toggle--close -->
-        <button class="main-header__toggle" type="button"></button>
+        <button class="main-header__toggle main-header__toggle--close main-nav--nojs" type="button"></button>
       </div>
       <!-- Закомментировать в конце скрипт "main.js и заработает main-nav--nojs" -->
-      <nav class="main-header__nav main-nav--nojs">
+      <nav class="main-header__nav main-nav main-nav--nojs">
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--desktop main-nav__link--active" href="#">главная</a>
@@ -151,30 +151,30 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <a class="main-footer__catenergy" href="#">
-          <svg class="main-footer__logo" width="101" height="18" viewBox="0 0 101 18" fill="#111111" role="img" aria-label="Логотип Cat Energy">
-            <use xlink:href="img/sprite.svg#logo-footer"></use>
+          <svg class="main-footer__logo" width="128" height="24" role="img" aria-label="Логотип Cat Energy">
+            <use href="img/sprite.svg#logo-footer"></use>
           </svg>
         </a>
         <ul class="main-footer__social social-list ">
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--vkontakte" href="https://vk.com/htmlacademy">
-              <svg width="28" height="22" fill="#666666" role="img" aria-labelledby="vk" >
+            <a class="social-list__link" href="https://vk.com/htmlacademy">
+              <svg class="social-list__link-item" width="28" height="22" role="img" aria-labelledby="vk" >
                 <title id="vk">Переход на Вконтакте</title>
-                <use href="img/sprite.svg#vk"></use>
+                <use xlink:href="img/sprite.svg#vk"></use>
               </svg>
             </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-              <svg width="28" height="22" viewBox="0 0 28 22" fill="#666666" role="img" aria-labelledby="youtube">
+            <a class="social-list__link" href="https://www.youtube.com/user/htmlacademyru">
+              <svg class="social-list__link-item" width="28" height="22" role="img" aria-labelledby="youtube">
                 <title id="youtube">Переход на YouTube</title>
-                <use href="img/sprite.svg#youtube"></use>
+                <use xlink:href="img/sprite.svg#youtube"></use>
               </svg>
             </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy">
-              <svg width="28" height="22" viewBox="0 0 28 22" fill="#666666" role="img" aria-labelledby="telegram">
+            <a class="social-list__link" href="https://t.me/htmlacademy">
+              <svg class="social-list__link-item" width="28" height="22" role="img" aria-labelledby="telegram">
                 <title id="telegram">Мессенджер телеграм</title>
                 <use href="img/sprite.svg#telegram"></use>
               </svg>
@@ -185,7 +185,7 @@
         <div class="main-footer__htmlacademy htmlacademy">
           <a class="htmlacademy__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="htmlacademy__text">HTML Academy</span>
-            <svg class="htmlacademy__image" width="27" height="34" fill="#666666" role="img" aria-labelledby="html-title">
+            <svg class="htmlacademy__image" width="27" height="34" role="img" aria-labelledby="html-title">
               <title id="html-title">Переход на сайт HTMLacademy</title>
               <use xlink:href="img/sprite.svg#htmlacademy__image"></use>
             </svg>

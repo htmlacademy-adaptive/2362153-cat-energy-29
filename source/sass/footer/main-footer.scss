@@ -6,8 +6,8 @@
   @include __wrapper-phone;
 
   display: grid;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     @include __wrapper-tablet-30;
@@ -38,13 +38,17 @@
     fill: #3e3e3e;
   }
 
-  &:active .main-footer__logo path {
+  &:active .main-footer__logo {
     fill: #6b6b6b;
   }
 
   @media (min-width: $tablet-width) {
     padding-bottom: 0;
   }
+}
+
+.main-footer__logo {
+  fill: var(--color-grey700);
 }
 
 .main-footer__social {
