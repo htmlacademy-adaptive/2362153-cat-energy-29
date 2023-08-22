@@ -45,12 +45,16 @@
   justify-content: center;
   align-items: center;
 
-  &:hover svg,
-  &:focus-visible svg {
+  &:hover .social-list__link-item,
+  &:focus-visible .social-list__link-item {
     fill: var(--color-accent);
   }
 
   &:active {
     opacity: 0.3;
   }
+}
+
+.social-list__link-item {
+  fill: var(--color-grey470);
 }

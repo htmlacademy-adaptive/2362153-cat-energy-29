@@ -14,24 +14,13 @@
 
 .owner__header {
   @include __header;
-
-  @media (min-width: $tablet-width) {
-    @include __wrapper-tablet-70;
-  }
-
-  @media (min-width: $desktop-width) {
-    @include __wrapper-desktop;
-  }
 }
 
 .owner__wrapper-title {
-  max-width: $phone-width;
-  padding: 0 20px;
-  box-sizing: border-box;
+  @include __wrapper-phone;
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
-    padding: 0;
+    @include __wrapper-tablet-70;
   }
 
   @media (min-width: $desktop-width) {
@@ -61,7 +50,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 -110px 78px;
+    margin: 0 -40px 78px;
   }
 }
 
@@ -98,8 +87,16 @@
 
 .owner__icon {
   position: absolute;
-  top: 16px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 14px;
+}
+
+.owner__icon svg {
+  fill: none;
+  stroke: var(--color-black);
+  display: flex;
+  align-items: center;
 }
 
 .owner__control {
