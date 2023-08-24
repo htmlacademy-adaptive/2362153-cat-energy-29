@@ -39,14 +39,14 @@
 .advantages-card__description--leaf {
   &::before {
     position: absolute;
-    background-image: url("../img/technology/leaf.svg");
+    background-image: url("../img/leaf.svg");
   }
 }
 
 .advantages-card__description--powder {
   &::before {
     position: absolute;
-    background-image: url("../img/technology/powder.svg");
+    background-image: url("../img/powder.svg");
   }
 }
 
@@ -54,13 +54,13 @@
 .advantages-card__description--eat {
   &::before {
     position: absolute;
-    background-image: url("../img/technology/eat.svg");
+    background-image: url("../img/eat.svg");
   }
 }
 
 .advantages-card__description--time {
   &::before {
     position: absolute;
-    background-image: url("../img/technology/time.svg");
+    background-image: url("../img/time.svg");
   }
 }

@@ -74,29 +74,29 @@
   z-index: 10;
   position: relative;
 
-  background-image: url("../img/slider/thumb-mobile.svg");
+  background-image: url("../img/thumb-mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
 
   &:hover {
-    background-image: url("../img/slider/thumb-hover.svg");
+    background-image: url("../img/thumb-hover.svg");
   }
 
   &:active {
-    background-image: url("../img/slider/thumb-active.svg");
+    background-image: url("../img/thumb-active.svg");
   }
 
   @media (min-width: $tablet-width) {
     height: 512px;
-    background-image: url("../img/slider/thumb-tablet.svg");
+    background-image: url("../img/thumb-tablet.svg");
 
     &:hover {
-      background-image: url("../img/slider/thumb-tablet-hover.svg");
+      background-image: url("../img/thumb-tablet-hover.svg");
     }
 
     &:active {
-      background-image: url("../img/slider/thumb-tablet-active.svg");
+      background-image: url("../img/thumb-tablet-active.svg");
     }
   }
 }

@@ -35,6 +35,10 @@
   padding: 0;
   list-style-type: none;
 
+  @media (min-width: 570px) {
+    justify-content: space-evenly;
+  }
+
   @media (min-width: $tablet-width) {
     justify-content: space-between;
     gap: 37px;

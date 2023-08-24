@@ -13,7 +13,7 @@ mapGoogle.classList.add("map__google-none");
 
         let placemark320 = new ymaps.Placemark(center, {}, {
           iconLayout: "default#image",
-          iconImageHref: "img/map/map-logo320.svg",
+          iconImageHref: "img/map-logo320.svg",
           iconImageSize: [52, 52],
           iconImageOffset: [-27, -40]
         });
@@ -35,7 +35,7 @@ mapGoogle.classList.add("map__google-none");
 
       let placemark768 = new ymaps.Placemark(center, {}, {
         iconLayout: "default#image",
-        iconImageHref: "img/map/map-logo768.svg",
+        iconImageHref: "img/map-logo768.svg",
         iconImageSize: [113, 106],
         iconImageOffset: [-57, -84]
       });

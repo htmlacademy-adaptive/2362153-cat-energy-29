@@ -13,16 +13,21 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Каталог</title>
   </head>
   <body class="page-body">
     <header class="main-header">
       <div class="main-header__wrapper">
         <a class="main-header__logo logo" href="index.html" aria-label="Логотип CatEnergy, переход на главную страницу">
-          <img class="logo__image" src="img/logo/logo-img.svg" width="33" height="38" alt="Логотип компании в виде картинки супер-пёс.">
           <picture>
-            <source media="(min-width: 768px)" srcset="img/logo/logo-text-444.svg">
-            <img class="logo__text" src="img/logo/logo-text-000.svg" width="101" height="18" alt="Логотип компании в виде текста Cat Energy.">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="70" height="60">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="60" height="50">
+            <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип компании в виде картинки супер-пёс.">
+          </picture>
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/logo-text-444.svg">
+            <img class="logo__text" src="img/logo-text-000.svg" width="101" height="18" alt="Логотип компании в виде текста Cat Energy.">
           </picture>
         </a>
         <!-- Для кнопки бургер меню/крестик: классы main-header__toggle--opened и main-header__toggle--close -->
@@ -57,7 +62,7 @@
                   <div class="product-card__image-wrapper">
                     <a class="product-card__link product-card__link--image" href="#">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="img/catalog/chicken500-tablet.png 1x, img/catalog/chicken500-tablet@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="img/catalog/chicken500-tablet.png 1x, img/catalog/chicken500-tablet@2x.png 2x" width="200" height="210">
                         <img class="product-card__image" src="img/catalog/chicken500-mobile.png" width="140" height="107"
                         srcset="img/catalog/chicken500-mobile@2x.png 2x" alt="Корм Кэт Энерджи, курица 500 г.">
                       </picture>
@@ -92,7 +97,7 @@
                   <div class="product-card__image-wrapper">
                     <a class="product-card__link product-card__link--image" href="#">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="img/catalog/chicken1000-tablet.png 1x, img/catalog/chicken1000-tablet@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="img/catalog/chicken1000-tablet.png 1x, img/catalog/chicken1000-tablet@2x.png 2x" width="200" height="210">
                         <img class="product-card__image" src="img/catalog/chicken1000-mobile.png" width="140" height="107"
                         srcset="img/catalog/chicken1000-mobile@2x.png 2x" alt="Корм Кэт Энерджи, курица 1000 г.">
                       </picture>
@@ -127,7 +132,7 @@
                   <div class="product-card__image-wrapper">
                     <a class="product-card__link product-card__link--image" href="#">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="img/catalog/fish500-tablet.png 1x, img/catalog/fish500-tablet@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="img/catalog/fish500-tablet.png 1x, img/catalog/fish500-tablet@2x.png 2x" width="200" height="210">
                         <img class="product-card__image" src="img/catalog/fish500-mobile.png" width="140" height="107"
                         srcset="img/catalog/fish500-mobile@2x.png 2x" alt="Корм Кэт Энерджи, рыба 500 г.">
                       </picture>
@@ -162,7 +167,7 @@
                   <div class="product-card__image-wrapper">
                     <a class="product-card__link product-card__link--image" href="#">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="img/catalog/fish1000-tablet.png 1x, img/catalog/fish1000-tablet@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="img/catalog/fish1000-tablet.png 1x, img/catalog/fish1000-tablet@2x.png 2x" width="200" height="210">
                         <img class="product-card__image" src="img/catalog/fish1000-mobile.png" width="140" height="107"
                         srcset="img/catalog/fish1000-mobile@2x.png 2x" alt="Корм Кэт Энерджи, рыба 1000 г.">
                       </picture>
@@ -197,7 +202,7 @@
                   <div class="product-card__image-wrapper">
                     <a class="product-card__link product-card__link--image" href="#">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="img/catalog/buckwheat500-tablet.png 1x, img/catalog/buckwheat500-tablet@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="img/catalog/buckwheat500-tablet.png 1x, img/catalog/buckwheat500-tablet@2x.png 2x" width="200" height="210">
                         <img class="product-card__image" src="img/catalog/buckwheat500-mobile.png" width="140" height="107"
                         srcset="img/catalog/buckwheat500-mobile@2x.png 2x" alt="Корм Кэт Энерджи, гречка 500 г.">
                       </picture>
@@ -232,7 +237,7 @@
                   <div class="product-card__image-wrapper">
                     <a class="product-card__link product-card__link--image" href="#">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="img/catalog/buckwheat1000-tablet.png 1x, img/catalog/buckwheat1000-tablet@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="img/catalog/buckwheat1000-tablet.png 1x, img/catalog/buckwheat1000-tablet@2x.png 2x" width="200" height="210">
                         <img class="product-card__image" src="img/catalog/buckwheat1000-mobile.png" width="140" height="107"
                         srcset="img/catalog/buckwheat1000-mobile@2x.png 2x" alt="Корм Кэт Энерджи, гречка 1000 г.">
                       </picture>
@@ -267,7 +272,7 @@
                   <div class="product-card__image-wrapper">
                     <a class="product-card__link product-card__link--image" href="#">
                       <picture>
-                        <source media="(min-width: 768px)" srcset="img/catalog/rice500-tablet.png 1x, img/catalog/rice500-tablet@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="img/catalog/rice500-tablet.png 1x, img/catalog/rice500-tablet@2x.png 2x" width="200" height="210">
                         <img class="product-card__image" src="img/catalog/rice500-mobile.png" width="140" height="107"
                         srcset="img/catalog/rice500-mobile@2x.png 2x" alt="Корм Кэт Энерджи, рис 500 г.">
                       </picture>
