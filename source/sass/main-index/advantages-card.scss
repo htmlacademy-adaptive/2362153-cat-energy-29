@@ -8,6 +8,10 @@
   font-size: 14px;
   line-height: 18px;
 
+  & br {
+    display: none;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -27,6 +31,10 @@
     padding-top: 151px;
     margin-bottom: 57px;
     box-sizing: border-box;
+
+    & br {
+      display: block;
+    }
 
     &::before {
       width: 80px;

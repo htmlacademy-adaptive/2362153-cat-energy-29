@@ -12,8 +12,8 @@
   @media (min-width: $tablet-width) {
     @include __wrapper-tablet-30;
 
-    padding-bottom: 60px;
-    padding-top: 60px;
+    padding-bottom: 55px;
+    padding-top: 55px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,5 +54,10 @@
 .main-footer__social {
   @media (min-width: $tablet-width) {
     flex-grow: 1;
+    margin-left: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 40px;
   }
 }

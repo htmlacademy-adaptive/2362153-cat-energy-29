@@ -21,7 +21,7 @@
   @include __wrapper-phone;
 
   padding-top: 20px;
-  padding-bottom: 21px;
+  padding-bottom: 13px;
 
   @media (min-width: $tablet-width) {
     max-width: $tablet-width;
@@ -42,6 +42,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 23px 27px;
+    gap: 10px;
   }
 
   @media (min-width: $desktop-width) {
@@ -76,14 +77,23 @@
   border: 1px solid var(--color-grey400);
   border-radius: 50%;
   background-color: var(--color-white);
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .target__control-label {
   position: absolute;
+  color: var(--color-grey500);
   top: 50%;
   padding-left: 45px;
   transform: translateY(-50%);
-  height: 100%;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 60px;
+  }
 }
 
 .target__input[type="radio"] {
@@ -97,9 +107,19 @@
     border-radius: 50%;
     content: "";
     transform: translateX(-50%) translateY(-50%);
+
+    @media (min-width: $tablet-width) {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &:focus-visible + .target__control-mark {
     outline: 1px solid var(--color-grey390);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
   }
 }

@@ -1,7 +1,15 @@
 .form-cat {
+  color: var(--color-grey500);
+
   @media (min-width: $tablet-width) {
     border: none;
-    margin-bottom: 72px;
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 81px;
   }
 }
 
@@ -36,12 +44,12 @@
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin-top: 64px;
+    margin-top: 61px;
     margin-bottom: 54px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 74px;
+    margin-top: 69px;
     margin-bottom: 56px;
   }
 }
@@ -82,6 +90,8 @@
   @media (min-width: $tablet-width) {
     text-align: start;
     margin: 0;
+    font-size: 16px;
+    line-height: 16px;
   }
 }
 
@@ -95,23 +105,27 @@
     grid-template-columns: 1fr 1fr;
     justify-content: start;
     align-items: center;
-    gap: 80px;
+    gap: 60px;
   }
 
   @media (min-width: $desktop-width) {
     @include __wrapper-desktop;
+    gap: 80px;
   }
 }
 
 .form-cat__button {
   text-align: center;
+  font-size: 16px;
   line-height: 20px;
   padding: 10px 20px;
   width: 100%;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    padding: 14px 20px;
+    font-size: 20px;
+    line-height: 1;
+    padding: 15px 20px;
   }
 }
 

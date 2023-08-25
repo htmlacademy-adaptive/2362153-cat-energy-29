@@ -4,11 +4,11 @@
   padding: 0;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 45px;
+    margin-bottom: 65px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 67px;
+    margin-bottom: 69px;
   }
 }
 
@@ -50,18 +50,19 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 -40px 78px;
+    margin: 0 -40px 73px;
   }
 }
 
 .owner__wrapper {
   @include __wrapper-phone;
   display: grid;
-  gap: 14px;
+  gap: 13px;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     @include __wrapper-tablet-70;
+    gap: 20px;
   }
 
   @media (min-width: 900px) {
@@ -124,5 +125,11 @@
     outline-offset: -2px;
     background-color: var(--color-white);
     border-radius: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 20px;
+    font-size: 20px;
+    line-height: 1;
   }
 }
