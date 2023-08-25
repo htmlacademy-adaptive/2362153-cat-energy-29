@@ -27,12 +27,16 @@
     width: 100vw;
     position: absolute;
     content: "";
-    top: 50%;
+    top: 41%;
     left: 0;
     transform: translateY(-50%);
     height: 2px;
     background-color: var(--color-accent);
     z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      top: 60%;
+    }
   }
 }
 

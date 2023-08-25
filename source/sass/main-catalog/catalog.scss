@@ -20,11 +20,13 @@
 
   @media (min-width: $desktop-width) {
     @include __wrapper-desktop;
+
+    margin-bottom: 78px;
   }
 }
 
 .catalog__wrapper-title {
-  padding: 27px 20px 41px;
+  padding: 27px 20px 39px;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
@@ -40,12 +42,16 @@
   line-height: 36px;
 
   @media (min-width: calc($phone-width + 1px)) {
-    text-align: center;
+    // text-align: center;
   }
 
   @media (min-width: $tablet-width) {
-    padding: 65px 0 84px;
+    padding: 61px 0 84px;
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 70px 0 84px;
   }
 }

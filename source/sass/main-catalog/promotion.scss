@@ -56,7 +56,7 @@
     align-items: center;
     margin: 0;
     height: 100%;
-    padding: 56px 42px 43px;
+    padding: 33px 42px 21px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/promotion/bg-promotion-desktop@2x.jpg");
@@ -73,8 +73,7 @@
   font-weight: 400;
   line-height: 20px;
   margin: 0;
-  padding: 0 60px;
-  padding-bottom: 43px;
+  padding: 0 50px 43px;
 
 
   @media (min-width: $tablet-width) {
@@ -90,7 +89,7 @@
   padding-top: 58px;
   width: 78px;
   height: 80px;
-  background-image: url("../img/promotion/gift.svg");
+  background-image: url("../img/gift.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;

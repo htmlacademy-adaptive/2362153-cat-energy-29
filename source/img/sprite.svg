@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-<symbol id="email" viewBox="0 0 18 14">
-  <path d="M0.5 5.5V13.5H17.5V5.5M0.5 0.5H17.5V2.5L9 8.5L0.5 2.5V0.5Z"  stroke-linecap="round" stroke-linejoin="round"/>
-</symbol>
+  <symbol id="email" viewBox="0 0 18 14">
+    <path d="M0.5 5.5V13.5H17.5V5.5M0.5 0.5H17.5V2.5L9 8.5L0.5 2.5V0.5Z"  stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
 
-<symbol id="phone" viewBox="0 0 20 20">
-  <g id="phone-stroke 1">
-    <path id="Vector" d="M10 10H18.5M18.5 10L16 7.5M18.5 10L16 12.5M8.5 2.5V7.5H5.5V12.5H8.5V17.5H6C4.5 17.5 3.5 16.5 3.5 15V5C3.5 3.5 4.5 2.5 6 2.5H8.5Z" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-</symbol>
+  <symbol id="phone" viewBox="0 0 20 20">
+    <g id="phone-stroke 1">
+      <path id="Vector" d="M10 10H18.5M18.5 10L16 7.5M18.5 10L16 12.5M8.5 2.5V7.5H5.5V12.5H8.5V17.5H6C4.5 17.5 3.5 16.5 3.5 15V5C3.5 3.5 4.5 2.5 6 2.5H8.5Z" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </symbol>
 
   <symbol id="logo-footer" viewBox="0 0 128 24">
     <g clip-path="url(#clip0_95546_762)">
@@ -46,14 +46,8 @@
     </g>
     <defs>
     <clipPath id="clip0_91733_69">
-    <rect width="27" height="34" fill="white">
+    <rect width="27" height="34" fill="white"/>
     </clipPath>
     </defs>
   </symbol>
-
-
-
-
-
-
 </svg>

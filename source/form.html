@@ -14,6 +14,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>Подбор программы</title>
 </head>
 
@@ -21,10 +22,14 @@
   <header class="main-header">
     <div class="main-header__wrapper">
       <a class="main-header__logo logo" href="index.html" aria-label="Логотип CatEnergy, переход на главную страницу">
-        <img class="logo__image" src="img/logo/logo-img.svg" width="33" height="38" alt="Логотип компании в виде картинки супер-пёс.">
         <picture>
-          <source media="(min-width: 768px)" srcset="img/logo/logo-text-444.svg">
-          <img class="logo__text" src="img/logo/logo-text-000.svg" width="101" height="18" alt="Логотип компании в виде текста Cat Energy.">
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="70" height="60">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="60" height="50">
+          <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип компании в виде картинки супер-пёс.">
+        </picture>
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/logo-text-444.svg">
+          <img class="logo__text" src="img/logo-text-000.svg" width="101" height="18" alt="Логотип компании в виде текста Cat Energy.">
         </picture>
       </a>
       <!-- Для кнопки бургер меню/крестик: классы main-header__toggle--opened и main-header__toggle--close -->
@@ -50,7 +55,7 @@
     <section class="form-cat">
       <div class="form-cat__wrapper">
         <h1 class="form-cat__title">Подбор программы</h1>
-        <p class="form-cat__description">Заполните анкету, и мы подберем
+        <p class="form-cat__description">Заполните анкету, и мы подберем <br>
           программу питания для вашего кота</p>
       </div>
         <form class="form-cat__data form" action="https://echo.htmlacademy.ru" method="get">
@@ -59,15 +64,15 @@
               <div class="info-cat__wrapper">
                 <!-- Добавить к `info-cat__item` класс `field-error`. С помощью JS будет валидация на ошибку-->
                 <div class="info-cat__item">
-                  <label class="info-cat__control" for="cat-name"> имя* </label>
+                  <label class="info-cat__control" for="cat-name"> имя:* </label>
                   <input class="info-cat__field" type="text" name="cat-name" id="cat-name" placeholder="барсик" required>
                 </div>
                 <div class="info-cat__item">
-                  <label class="info-cat__control" for="cat-weight"> вес(кг)*</label>
+                  <label class="info-cat__control" for="cat-weight"> вес (кг):*</label>
                   <input class="info-cat__field" type="number" name="cat-weight" id="cat-weight" placeholder="7" min="0" max="100" required>
                 </div>
                 <div class="info-cat__item">
-                  <label class="info-cat__control" for="cat-age"> возраст(лет)*</label>
+                  <label class="info-cat__control" for="cat-age"> возраст (лет):</label>
                   <input class="info-cat__field" type="number" name="cat-age" id="cat-age" placeholder="7" min="0" max="30" required>
                 </div>
               </div>
@@ -106,7 +111,7 @@
           <fieldset class="form__info owner">
             <div class="owner__header">
               <div class="owner__wrapper-title">
-                <legend class="owner__title">Контактные данные <br>(владельца кота)</legend>
+                <legend class="owner__title">Контактные данные <br> (владельца кота)</legend>
               </div>
             </div>
             <div class="owner__wrapper">
@@ -195,7 +200,7 @@
     <section class="map map--basic">
       <div class="map__wrapper">
         <div class="map__title-wrapper">
-          <h2 class="map__title">приглашаем к сотрудничеству дилеров!</h2>
+          <h2 class="map__title">приглашаем <br>к сотрудничеству дилеров!</h2>
           <address class="map__description">ул. Большая
             Конюшенная, д. 19/8 <br>
             <span class="map__city">Санкт-Петербург</span></address>
