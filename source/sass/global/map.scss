@@ -13,7 +13,6 @@
   grid-template-columns: 1fr 1fr;
   padding-top: 26px;
   padding-bottom: 26px;
-  // gap: 15px;
 
   @media (min-width: $tablet-width) {
     @include __wrapper-tablet-70;
@@ -63,7 +62,7 @@
   margin: 0;
   font-weight: 400;
   color: var(--color-grey500);
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Tahoma", sans-serif;
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
