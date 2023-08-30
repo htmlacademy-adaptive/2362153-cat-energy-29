@@ -1,24 +1,38 @@
 .additionally {
   margin: 0;
+  margin-top: -5px;
   padding: 0;
   border: none;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 65px;
+    margin-top: 0;
+    margin-bottom: 33px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 71px;
+    margin-bottom: 39px;
   }
 }
 
 .additionally__header {
   @include __header;
+  padding: 0;
+  margin-bottom: 27px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 58px;
+  }
 }
 
 .additionally__wrapper {
   @include __wrapper-phone;
   text-transform: uppercase;
+  margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
     @include __wrapper-tablet-70;
@@ -51,17 +65,16 @@
   line-height: 26px;
   text-transform: none;
   padding: 0 20px;
-  margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
     padding: 0 40px;
-    margin: 0 -40px 55px;
+    margin: 0 -40px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 -40px 58px;
+    margin: 0 -40px;
   }
 }
 
