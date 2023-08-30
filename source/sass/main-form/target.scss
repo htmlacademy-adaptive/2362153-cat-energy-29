@@ -21,7 +21,7 @@
   @include __wrapper-phone;
 
   padding-top: 20px;
-  padding-bottom: 13px;
+  padding-bottom: 15px;
 
   @media (min-width: $tablet-width) {
     max-width: $tablet-width;
@@ -121,5 +121,11 @@
   @media (min-width: $tablet-width) {
     width: 20px;
     height: 20px;
+  }
+
+  &:disabled ~ span {
+    opacity: 0.3;
+    color: rgb(0, 0, 0, 0.3);
+    cursor: default;
   }
 }
