@@ -29,7 +29,6 @@
     margin-bottom: 84px;
     margin-top: -126px;
     padding-top: 123px;
-    z-index: -1;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero/bg-hero-desktop@2x.jpg"), linear-gradient(var(--color-bg-hero) 100%, var(--color-white) 60%);
@@ -132,7 +131,6 @@
     width: 552px;
     height: 499px;
     transform: translateX(-35%);
-    z-index: -1;
   }
 }
 
