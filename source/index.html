@@ -31,7 +31,7 @@
           </picture>
         </a>
         <!-- Для кнопки бургер меню/крестик: классы main-header__toggle--opened и main-header__toggle--close -->
-        <button class="main-header__toggle main-header__toggle--close main-nav--nojs" type="button"></button>
+        <button class="main-header__toggle main-header__toggle--close main-header__toggle--nojs" type="button"></button>
       </div>
       <!-- Закомментировать в конце скрипт "main.js и заработает main-nav--nojs" -->
       <nav class="main-header__nav main-nav main-nav--nojs">
@@ -69,7 +69,7 @@
       </section>
 
       <section class="programs">
-        <div class="programs-wrapper">
+        <div class="programs__wrapper">
           <h2 class="visually-hidden">Программы питания</h2>
           <ul class="programs__list program-list">
             <li class="program-list__item">
@@ -132,11 +132,11 @@
                 <dd class="result__index-description">затрачено времени</dd>
               </div>
             </dl>
-            <p class="result__total">Затраты на питание: <span class="result__total-price">15 000 РУБ.</span></p>
+            <p class="review__total">Затраты на питание: <span class="review__total-price">15 000 РУБ.</span></p>
           </div>
           <div class="review__slider slider">
             <div class="slider__cat-slim"></div>
-            <input class="slider__input" type="range" value="50" max="100">
+            <input class="slider__input" type="range" value="50" max="100" aria-label="Слайдер, показывающий изменение кота от толстого у худому">
           </div>
           </div>
 
@@ -151,8 +151,16 @@
               <span class="map__city">Санкт-Петербург</span></address>
           </div>
         </div>
-        <div id="map-yandex" class="map__frame">
-          <iframe class="map__google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197818!2d30.32047247665386!3d59.93871916209424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1692046420276!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map__frame" id="map-yandex" >
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1440px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x" width="1440" height="400">
+            <source media="(min-width: 768px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x" width="768" height="400">
+            <img class="map__image" src="img/map/map-mobile.jpg" width="320" height="362" srcset="img/map/map-mobile@2x.jpg 2x" alt="Карта с указанием местоположения">
+          </picture>
         </div>
       </section>
     </main>

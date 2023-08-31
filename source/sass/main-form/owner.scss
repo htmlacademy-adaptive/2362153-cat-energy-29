@@ -14,6 +14,10 @@
 
 .owner__header {
   @include __header;
+
+  &::before {
+    top: 39%;
+  }
 }
 
 .owner__wrapper-title {

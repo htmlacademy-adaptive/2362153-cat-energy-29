@@ -56,6 +56,7 @@
 
 .slider__input {
   -webkit-appearance: none; /* stylelint-disable-line */
+  -moz-appearance: none; /* stylelint-disable-line */
   appearance: none;
   width: 100%;
   background: none;
@@ -64,10 +65,50 @@
 }
 
 .slider__input::-webkit-slider-thumb {
-  -webkit-appearance: none; /* stylelint-disable-line */
+  -moz-appearance: none; /* stylelint-disable-line */
   appearance: none;
   width: 40px;
   height: 256px;
+
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+
+  background-image: url("../img/thumb-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+
+  &:hover {
+    background-image: url("../img/thumb-hover.svg");
+  }
+
+  &:active {
+    background-image: url("../img/thumb-active.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 512px;
+    background-image: url("../img/thumb-tablet.svg");
+
+    &:hover {
+      background-image: url("../img/thumb-tablet-hover.svg");
+    }
+
+    &:active {
+      background-image: url("../img/thumb-tablet-active.svg");
+    }
+  }
+}
+
+.slider__input::-moz-range-thumb {
+  -moz-appearance: none; /* stylelint-disable-line */
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  height: 256px;
+  margin-left: 20px;
 
   cursor: pointer;
   z-index: 10;

@@ -67,35 +67,3 @@
     background-color: var(--color-grey300);
   }
 }
-
-.result__total {
-  margin: 0;
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  text-transform: uppercase;
-  text-align: center;
-
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 28px;
-    max-width: 190px;
-    text-align: end;
-    justify-self: end;
-    align-self: center;
-    margin: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    text-align: center;
-    justify-self: start;
-    max-width: 100%;
-  }
-}
-
-.result__total-price {
-  @media (min-width: $desktop-width) {
-    margin-left: 63px;
-  }
-}

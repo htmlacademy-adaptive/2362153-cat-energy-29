@@ -23,15 +23,28 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url("../img/hero/bg-hero-desktop.jpg"), linear-gradient(to left, var(--color-bg-hero) 50%, #ffffff 50%);
+    background-image: url("../img/hero/bg-hero-desktop.jpg"), linear-gradient(to left, var(--color-bg-hero) 50%, var(--color-white) 50%);
     background-repeat: no-repeat;
     background-position: bottom right;
     margin-bottom: 84px;
     margin-top: -126px;
     padding-top: 123px;
+    position: relative;
+
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -285px;
+      right: 0;
+      background-image: linear-gradient(to left, var(--color-bg-hero) 50%, var(--color-white) 50%);
+      height: 350px;
+      margin-top: 0;
+      min-width: 100%;
+    }
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/hero/bg-hero-desktop@2x.jpg"), linear-gradient(var(--color-bg-hero) 100%, var(--color-white) 60%);
+      background-image: url("../img/hero/bg-hero-desktop@2x.jpg"), linear-gradient(to left, var(--color-bg-hero) 50%, var(--color-white) 50%);
       background-size: contain;
     }
   }
