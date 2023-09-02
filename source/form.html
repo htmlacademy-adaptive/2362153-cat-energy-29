@@ -13,6 +13,8 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Подбор программы</title>
@@ -41,10 +43,10 @@
         <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">главная</a>
         </li>
-        <li class="main-nav__item" class="main-nav__item ">
+        <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">каталог продукции</a>
         </li>
-        <li class="main-nav__item" class="main-nav__item">
+        <li class="main-nav__item">
           <a class="main-nav__link main-nav__link--active" href="#">подбор программы</a>
         </li>
       </ul>
@@ -151,11 +153,11 @@
           </div>
 
           <fieldset class="form__info additionally">
-            <div class="additionally__header">
-              <div class="additionally__wrapper-title">
-                <legend class="additionally__title">Дополнительно:</legend>
-              </div>
-            </div>
+            <legend class="additionally__header">
+              <h2 class="additionally__wrapper-title">
+                <span class="additionally__title">Дополнительно</span>
+              </h2>
+            </legend>
             <div class="additionally__wrapper">
               <ul class="additionally__list">
                 <li class="additionally__item">
@@ -265,8 +267,7 @@
       </div>
     </div>
   </footer>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=3a12c6a0-a8d1-49d6-b3c1-78cacf9b5120&lang=ru_RU" type="text/javascript">
-  </script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=3a12c6a0-a8d1-49d6-b3c1-78cacf9b5120&lang=ru_RU"></script>
   <script src="js/main.js"></script>
   <script src="js/map.js"></script>
 </body>

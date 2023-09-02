@@ -27,7 +27,7 @@
     width: 100vw;
     position: absolute;
     content: "";
-    top: 41%;
+    top: 50%;
     left: 0;
     transform: translateY(-50%);
     height: 2px;
@@ -44,7 +44,6 @@
   position: relative;
   z-index: 10;
   width: max-content;
-  max-width: 90%;
   margin: 0 -20px;
   background-color: var(--color-white);
 }
