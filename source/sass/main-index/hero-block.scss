@@ -39,14 +39,17 @@
       right: 0;
       background-image: linear-gradient(to left, var(--color-bg-hero) 50%, var(--color-white) 50%);
       height: 350px;
-      margin-top: 0;
-      min-width: 100%;
+      width: calc(100% + 12px);
     }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero/bg-hero-desktop@2x.jpg"), linear-gradient(to left, var(--color-bg-hero) 50%, var(--color-white) 50%);
       background-size: contain;
     }
+  }
+
+  @media (min-width: 1452px) {
+    width: 100%;
   }
 }
 

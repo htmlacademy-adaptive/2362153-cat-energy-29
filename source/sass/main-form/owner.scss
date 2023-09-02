@@ -18,6 +18,12 @@
   &::before {
     top: 39%;
   }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      top: 60%;
+    }
+  }
 }
 
 .owner__wrapper-title {
