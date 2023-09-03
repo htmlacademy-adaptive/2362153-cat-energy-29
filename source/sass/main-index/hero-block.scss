@@ -9,6 +9,7 @@
   background-position: center 0;
   background-repeat: no-repeat;
   padding-bottom: 20px;
+  width: 100%;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/hero/bg-hero-mobile@2x.jpg"), linear-gradient(var(--color-bg-hero) 100%, var(--color-white) 60%);
@@ -39,18 +40,11 @@
       right: 0;
       background-image: linear-gradient(to left, var(--color-bg-hero) 50%, var(--color-white) 50%);
       height: 350px;
-      width: calc(100% + 12px);
     }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero/bg-hero-desktop@2x.jpg"), linear-gradient(to left, var(--color-bg-hero) 50%, var(--color-white) 50%);
       background-size: contain;
-    }
-  }
-
-  @media (min-width: 1452px) {
-    &::before {
-      width: 100%;
     }
   }
 }

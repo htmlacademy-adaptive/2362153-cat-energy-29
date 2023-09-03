@@ -14,18 +14,24 @@
 
 .owner__header {
   @include __header;
+  padding: 0;
+  width: 100%;
 
   &::before {
-    top: 35%;
+    top: 39%;
   }
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 75px;
+
     &::before {
       top: 67%;
     }
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 73px;
+
     &::before {
       top: 60%;
     }
@@ -37,14 +43,10 @@
 
   @media (min-width: $tablet-width) {
     @include __wrapper-tablet-70;
-
-    margin-bottom: 75px;
   }
 
   @media (min-width: $desktop-width) {
     @include __wrapper-desktop;
-
-    margin-bottom: 73px;
   }
 }
 
@@ -59,7 +61,7 @@
   text-transform: none;
   min-width: 200px;
   margin: 26px -20px 35px;
-  padding: 0 20px;
+  padding: 0 8px 0 20px;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
@@ -110,6 +112,10 @@
   top: 50%;
   transform: translateY(-50%);
   right: 14px;
+
+  @media (min-width: $desktop-width) {
+    right: 16px;
+  }
 }
 
 .owner__icon svg {
