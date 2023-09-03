@@ -1,7 +1,6 @@
 @import "global/fonts.scss";
 @import "global/variables.scss";
 @import "global/mixins.scss";
-@import "global/field-error.scss";
 @import "global/page-body.scss";
 @import "global/map.scss";
 @import "global/button.scss";
@@ -42,6 +41,7 @@
 @import "main-form/info-cat.scss";
 @import "main-form/owner.scss";
 @import "main-form/target.scss";
+@import "global/field-error.scss";
 
 
 //FOOTER

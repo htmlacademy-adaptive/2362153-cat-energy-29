@@ -16,10 +16,16 @@
   @include __header;
 
   &::before {
-    top: 39%;
+    top: 35%;
   }
 
   @media (min-width: $tablet-width) {
+    &::before {
+      top: 67%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
     &::before {
       top: 60%;
     }
@@ -31,10 +37,14 @@
 
   @media (min-width: $tablet-width) {
     @include __wrapper-tablet-70;
+
+    margin-bottom: 75px;
   }
 
   @media (min-width: $desktop-width) {
     @include __wrapper-desktop;
+
+    margin-bottom: 73px;
   }
 }
 
@@ -60,10 +70,6 @@
     & br {
       display: none;
     }
-  }
-
-  @media (min-width: $desktop-width) {
-    // margin: 0 -40px;
   }
 }
 
@@ -94,7 +100,7 @@
   width: 100%;
   position: relative;
 
-  &:focus-within .owner__icon svg {
+  &:focus-within svg {
     stroke: var(--color-accent);
   }
 }

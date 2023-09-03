@@ -1,5 +1,5 @@
 .field-error {
-  &:focus-within .owner__icon .owner__icon-svg {
+  &:focus-within svg {
     stroke: var(--color--error);
   }
 

@@ -41,10 +41,6 @@
   font-size: 36px;
   line-height: 36px;
 
-  @media (min-width: calc($phone-width + 1px)) {
-    // text-align: center;
-  }
-
   @media (min-width: $tablet-width) {
     padding: 61px 0 84px;
     font-size: 60px;
