@@ -12,6 +12,16 @@
 
 .comment__header {
   @include __header;
+
+  &::before {
+    top: 44%;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      top: 62%;
+    }
+  }
 }
 
 .comment__wrapper {

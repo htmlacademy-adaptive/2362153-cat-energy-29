@@ -9,6 +9,7 @@
   background-position: center 0;
   background-repeat: no-repeat;
   padding-bottom: 20px;
+  width: 100%;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/hero/bg-hero-mobile@2x.jpg"), linear-gradient(var(--color-bg-hero) 100%, var(--color-white) 60%);
@@ -23,15 +24,15 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url("../img/hero/bg-hero-desktop.jpg"), linear-gradient(to left, var(--color-bg-hero) 50%, #ffffff 50%);
+    background-image: url("../img/hero/bg-hero-desktop.jpg"), linear-gradient(to left, var(--color-bg-hero) 50%, var(--color-white) 50%);
     background-repeat: no-repeat;
     background-position: bottom right;
     margin-bottom: 84px;
-    margin-top: -126px;
     padding-top: 123px;
+    position: relative;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/hero/bg-hero-desktop@2x.jpg"), linear-gradient(var(--color-bg-hero) 100%, var(--color-white) 60%);
+      background-image: url("../img/hero/bg-hero-desktop@2x.jpg"), linear-gradient(to left, var(--color-bg-hero) 50%, var(--color-white) 50%);
       background-size: contain;
     }
   }
@@ -85,7 +86,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 110px;
+    padding-top: 102px;
     padding-left: 80px;
     max-width: 40%;
   }
@@ -126,7 +127,7 @@
   @media (min-width: $desktop-width) {
     display: block;
     position: absolute;
-    top: 153px;
+    top: 143px;
     left: 52%;
     width: 552px;
     height: 499px;

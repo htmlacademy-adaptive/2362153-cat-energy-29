@@ -12,7 +12,7 @@
   }
 }
 
-.programs-wrapper {
+.programs__wrapper {
   @include __wrapper-phone;
 
   @media (min-width: $tablet-width) {

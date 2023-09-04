@@ -1,9 +1,9 @@
 //Карта
 
-let mapGoogle = document.querySelector(".map__google");
+let mapImage = document.querySelector(".map__image");
 let center = [59.938631, 30.3230374];
 
-mapGoogle.classList.add("map__google-none");
+mapImage.classList.add("map__image-none");
 
     function init(){
         var myMap = new ymaps.Map("map-yandex", {

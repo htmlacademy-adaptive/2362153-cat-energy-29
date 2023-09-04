@@ -12,7 +12,7 @@
 
   @media (min-width: $desktop-width) {
     border: none;
-    background: linear-gradient(to top, var(--color-grey300) 77%, var(--color-white) 77%);
+    background: linear-gradient(to bottom, var(--color-white) 138px, var(--color-grey300) 138px);
     padding-bottom: 70px;
   }
 }
@@ -159,5 +159,37 @@
   @media (min-width: $desktop-width) {
     grid-column: 2 /3;
     grid-row: 1 / 4;
+  }
+}
+
+.review__total {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 28px;
+    max-width: 190px;
+    text-align: end;
+    justify-self: end;
+    align-self: center;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+    justify-self: start;
+    max-width: 100%;
+  }
+}
+
+.review__total-price {
+  @media (min-width: $desktop-width) {
+    margin-left: 63px;
   }
 }

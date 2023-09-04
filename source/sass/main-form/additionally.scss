@@ -20,12 +20,24 @@
   margin-bottom: 27px;
   width: 100%;
 
+  &::before {
+    top: 57%;
+  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 55px;
+
+    &::before {
+      top: 60%;
+    }
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 58px;
+
+    &::before {
+      top: 66%;
+    }
   }
 }
 
@@ -145,6 +157,7 @@
     font-size: 20px;
     line-height: normal;
     padding-left: 60px;
+    top: 60%;
   }
 }
 
