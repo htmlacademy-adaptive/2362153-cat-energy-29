@@ -28,19 +28,8 @@
     background-repeat: no-repeat;
     background-position: bottom right;
     margin-bottom: 84px;
-    margin-top: -126px;
     padding-top: 123px;
     position: relative;
-
-
-    &::before {
-      position: absolute;
-      content: "";
-      top: -285px;
-      right: 0;
-      background-image: linear-gradient(to left, var(--color-bg-hero) 50%, var(--color-white) 50%);
-      height: 350px;
-    }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero/bg-hero-desktop@2x.jpg"), linear-gradient(to left, var(--color-bg-hero) 50%, var(--color-white) 50%);
@@ -97,7 +86,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 110px;
+    padding-top: 102px;
     padding-left: 80px;
     max-width: 40%;
   }
@@ -138,7 +127,7 @@
   @media (min-width: $desktop-width) {
     display: block;
     position: absolute;
-    top: 153px;
+    top: 143px;
     left: 52%;
     width: 552px;
     height: 499px;

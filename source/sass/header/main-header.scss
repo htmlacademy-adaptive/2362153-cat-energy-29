@@ -25,7 +25,17 @@
     max-width: $desktop-width;
     margin-top: 54px;
     padding: 0 110px;
-    position: relative;
+  }
+}
+
+.main-header--index {
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
   }
 }
 
@@ -43,7 +53,7 @@
   }
 }
 
-.main-header__wrapper--index-mobile {
+.main-header__wrapper--index {
   border-bottom: none;
 }
 
